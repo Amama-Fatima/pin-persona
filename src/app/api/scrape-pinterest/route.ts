@@ -5,10 +5,10 @@ export async function POST(req: Request) {
     const { keyword, limit = 20 } = await req.json();
 
     if (!keyword) {
-      return new Response(
-        JSON.stringify({ error: 'Keyword is required' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ error: "Keyword is required" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
     const scraper = new PinterestScrapper();
@@ -18,21 +18,20 @@ export async function POST(req: Request) {
 
     return new Response(JSON.stringify(result), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
-
   } catch (error: unknown) {
-    console.error('Scraping error:', error);
+    console.error("Scraping error:", error);
 
     return new Response(
       JSON.stringify({
-        error: 'Failed to scrape Pinterest images',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        error: "Failed to scrape Pinterest images",
+        details: error instanceof Error ? error.message : "Unknown error",
       }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
+        headers: { "Content-Type": "application/json" },
+      },
     );
   }
 }

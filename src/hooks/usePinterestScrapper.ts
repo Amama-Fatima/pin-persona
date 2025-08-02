@@ -1,5 +1,5 @@
-import { ScrapingResult } from '@/lib/types';
-import { useState } from 'react';
+import { ScrapingResult } from "@/lib/types";
+import { useState } from "react";
 
 export const usePinterestScraper = () => {
   const [loading, setLoading] = useState(false);
@@ -11,10 +11,10 @@ export const usePinterestScraper = () => {
     setError(null);
 
     try {
-      const response = await fetch('/api/scrape-pinterest', {
-        method: 'POST',
+      const response = await fetch("/api/scrape-pinterest", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ keyword, limit }),
       });
@@ -27,7 +27,8 @@ export const usePinterestScraper = () => {
       setResults(data);
       return data;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to scrape images';
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to scrape images";
       setError(errorMessage);
       throw err;
     } finally {
@@ -41,6 +42,6 @@ export const usePinterestScraper = () => {
     error,
     results,
     clearResults: () => setResults(null),
-    clearError: () => setError(null)
+    clearError: () => setError(null),
   };
 };
