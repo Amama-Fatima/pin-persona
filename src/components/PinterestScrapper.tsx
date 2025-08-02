@@ -4,6 +4,34 @@
 import { usePinterestScraper } from "@/hooks/usePinterestScrapper";
 import { PinterestImage } from "@/lib/types";
 import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Download,
+  ExternalLink,
+  Search,
+  Loader2,
+  AlertCircle,
+  Trash2,
+} from "lucide-react";
 
 const PinterestScrapper = () => {
   const [keyword, setKeyword] = useState("");
@@ -44,154 +72,201 @@ const PinterestScrapper = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">
-          Pinterest Image Scraper
-        </h1>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex-1">
-              <label
-                htmlFor="keyword"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Search Keywords
-              </label>
-              <input
-                id="keyword"
-                type="text"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-                placeholder="Enter keywords (e.g., 'modern kitchen design')"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                disabled={loading}
-              />
-            </div>
-
-            <div className="w-full sm:w-32">
-              <label
-                htmlFor="limit"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Image Limit
-              </label>
-              <select
-                id="limit"
-                value={imageLimit}
-                onChange={(e) => setImageLimit(Number(e.target.value))}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                disabled={loading}
-              >
-                <option value={10}>10</option>
-                <option value={20}>20</option>
-                <option value={30}>30</option>
-                <option value={50}>50</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="flex gap-4">
-            <button
-              type="submit"
-              disabled={loading || !keyword.trim()}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
-            >
-              {loading ? "Scraping..." : "Search Images"}
-            </button>
-
-            {results && (
-              <button
-                type="button"
-                onClick={clearResults}
-                className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                Clear Results
-              </button>
-            )}
-          </div>
-        </form>
-
-        {error && (
-          <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-            <h3 className="font-medium">Error occurred:</h3>
-            <p>{error}</p>
-          </div>
-        )}
-      </div>
-
-      {loading && (
-        <div className="text-center py-12">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-          <p className="mt-4 text-gray-600">Scraping Pinterest images...</p>
-        </div>
-      )}
-
-      {results && (
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-800">
-              Results for &quot;{results.keyword}&quot;
-            </h2>
-            <span className="text-gray-600">
-              {results.totalFound} images found
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {results.images.map((image) => (
-              <div
-                key={image.id}
-                className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="aspect-square relative overflow-hidden">
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform cursor-pointer"
-                    loading="lazy"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "/api/placeholder/300/300";
-                    }}
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="max-w-6xl mx-auto p-6 space-y-8">
+        {/* Header Card */}
+        <Card className="border-border">
+          <CardHeader>
+            <CardTitle className="text-3xl font-bold flex items-center gap-2">
+              <Search className="h-8 w-8 text-primary" />
+              Pinterest Image Scraper
+            </CardTitle>
+            <CardDescription>
+              Search and download high-quality images from Pinterest
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="md:col-span-3">
+                  <Label htmlFor="keyword" className="text-sm font-medium">
+                    Search Keywords
+                  </Label>
+                  <Input
+                    id="keyword"
+                    type="text"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                    placeholder="Enter keywords (e.g., 'modern kitchen design')"
+                    className="mt-1"
+                    disabled={loading}
                   />
                 </div>
 
-                <div className="p-4">
-                  <h3 className="font-medium text-gray-800 text-sm line-clamp-2 mb-2">
-                    {image.title}
-                  </h3>
-
-                  {image.description && (
-                    <p className="text-xs text-gray-600 line-clamp-2 mb-3">
-                      {image.description}
-                    </p>
-                  )}
-
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => downloadImage(image)}
-                      className="flex-1 px-3 py-2 bg-green-600 text-white text-xs rounded hover:bg-green-700 transition-colors"
-                    >
-                      Download
-                    </button>
-
-                    <a
-                      href={image.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 px-3 py-2 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors text-center"
-                    >
-                      View Original
-                    </a>
-                  </div>
+                <div>
+                  <Label htmlFor="limit" className="text-sm font-medium">
+                    Image Limit
+                  </Label>
+                  <Select
+                    value={imageLimit.toString()}
+                    onValueChange={(value) => setImageLimit(Number(value))}
+                    disabled={loading}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="10">10</SelectItem>
+                      <SelectItem value="20">20</SelectItem>
+                      <SelectItem value="30">30</SelectItem>
+                      <SelectItem value="50">50</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      )}
+
+              <div className="flex gap-4">
+                <Button
+                  type="submit"
+                  disabled={loading || !keyword.trim()}
+                  className="flex items-center gap-2"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Scraping...
+                    </>
+                  ) : (
+                    <>
+                      <Search className="h-4 w-4" />
+                      Search Images
+                    </>
+                  )}
+                </Button>
+
+                {results && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={clearResults}
+                    className="flex items-center gap-2"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                    Clear Results
+                  </Button>
+                )}
+              </div>
+            </form>
+
+            {error && (
+              <Alert variant="destructive" className="mt-6">
+                <AlertCircle className="h-4 w-4" />
+                <AlertTitle>Error occurred</AlertTitle>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Loading State */}
+        {loading && (
+          <Card className="border-border">
+            <CardContent className="flex flex-col items-center justify-center py-12">
+              <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
+              <p className="text-muted-foreground">
+                Scraping Pinterest images...
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Results */}
+        {results && (
+          <Card className="border-border">
+            <CardHeader>
+              <div className="flex justify-between items-start">
+                <div>
+                  <CardTitle className="text-2xl">
+                    Results for &quot;{results.keyword}&quot;
+                  </CardTitle>
+                  <CardDescription className="mt-1">
+                    Found {results.totalFound} images
+                  </CardDescription>
+                </div>
+                <Badge variant="secondary" className="text-sm">
+                  {results.images.length} loaded
+                </Badge>
+              </div>
+            </CardHeader>
+            <Separator />
+            <CardContent className="pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {results.images.map((image) => (
+                  <Card
+                    key={image.id}
+                    className="group overflow-hidden border-border hover:shadow-lg transition-all duration-300 hover:border-primary/20"
+                  >
+                    <div className="aspect-square relative overflow-hidden bg-muted">
+                      <img
+                        src={image.url}
+                        alt={image.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = "/api/placeholder/300/300";
+                        }}
+                      />
+                    </div>
+
+                    <CardContent className="p-4 space-y-3">
+                      <div className="space-y-2">
+                        <h3 className="font-medium text-sm line-clamp-2 leading-tight">
+                          {image.title}
+                        </h3>
+
+                        {image.description && (
+                          <p className="text-xs text-muted-foreground line-clamp-2">
+                            {image.description}
+                          </p>
+                        )}
+                      </div>
+
+                      <div className="flex gap-2">
+                        <Button
+                          size="sm"
+                          onClick={() => downloadImage(image)}
+                          className="flex-1 flex items-center gap-1"
+                          variant="default"
+                        >
+                          <Download className="h-3 w-3" />
+                          Download
+                        </Button>
+
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          asChild
+                          className="flex-1 flex items-center gap-1"
+                        >
+                          <a
+                            href={image.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="h-3 w-3" />
+                            View
+                          </a>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
     </div>
   );
 };
