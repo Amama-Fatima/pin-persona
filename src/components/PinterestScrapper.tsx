@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import { usePinterestScraper } from "@/hooks/usePinterestScrapper";
 import { PinterestImage } from "@/lib/types";
 import React, { useState } from "react";
