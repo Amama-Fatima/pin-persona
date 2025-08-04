@@ -1,810 +1,810 @@
 [
-    {
-        "name": "Seneca",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. His writings explore ethics, virtue, and resilience under adversity.",
-        "target_text": "roman stoicism, candlelit study, Roman philosophy aesthetic, marble busts, ancient roman libraries, Roman villas, roman statesman aesthetic"
-    },
-    {
-        "name": "Epictetus",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Epictetus was a former slave turned Stoic philosopher whose teachings, recorded by his student Arrian, emphasize self-mastery, rationality, and acceptance of fate.",
-        "target_text": "roman stoicism, minimalist quarters, ancient rome aesthetic, Roman sandals, rustic libraries aesthetic, philosophy of fate, inner peace"
-    },
-    {
-        "name": "Marcus Aurelius",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Marcus Aurelius was a Roman emperor and Stoic philosopher best known for his 'Meditations', a personal reflection on leadership, duty, and virtue.",
-        "target_text": "roman stoicism, golden laurel crown aesthetic, Roman armor, battlefield wisdom, marble palace, emperor philosopher, Meditations, ancient leadership, stoic strength"
-    },
-    {
-        "name": "Lucretius",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Titus Lucretius Carus was a Roman poet and philosopher who authored 'On the Nature of Things', explaining Epicurean atomism and natural philosophy.",
-        "target_text": "atomist diagrams aesthetic, On the Nature of Things, Roman gardens aesthetic, rustic libraries aesthetic, terracotta jars aesthetic, nature worship aesthetic, countryside temples aesthetic, roman science aesthetic, ancient elements aesthetic"
-    },
-    {
-        "name": "Boethius",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Middle Ages",
-        "bio": "Anicius Manlius Severinus Boethius was a Roman senator and philosopher best known for his work 'The Consolation of Philosophy', written while imprisoned, blending classical thought with early medieval Christian ideas.",
-        "target_text": "stone prison walls, The Consolation of Philosophy, melancholic marble, dim candlelight, chained wisdom, middle ages roman aesthetics, introspective solitude, medieval christianity"
-    },
-    {
-        "name": "Plotinus",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Plotinus was a major philosopher of late antiquity and founder of Neoplatonism. His metaphysical writings emphasize the One, the soul’s ascent, and mystical union with higher reality.",
-        "target_text": "neoplatonism aesthetic, sacred geometry, quill art, Roman temple glow, mystical scrolls, celestial frescoes, star mosaics, spiritual ascent, metaphysical aura, mystical aesthetics, roman philosophy aesthetic"
-    },
-    {
-        "name": "Porphyry",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Porphyry was a Neoplatonist philosopher and student of Plotinus, known for systematizing his teacher’s ideas and writing on metaphysics, vegetarianism, and theurgy.",
-        "target_text": "neoplatonism aesthetic, roman aesthetics, sacred geometry, divine aesthetics, geometric mosaics, theurgy symbols, quill art, philosopher's study, metaphysical art"
-    },
-    {
-        "name": "Musonius Rufus",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Musonius Rufus was a Roman Stoic philosopher who emphasized practical ethics, the equality of women in philosophy, and simple rural living as the ideal life.",
-        "target_text": "roman stoicism, roman scripts, golden quills aesthetics, stoic countryside, ancient rome countryside, vine-covered pergolas, roman rustic villas, terracotta rooftops, serene philosophy"
-    },
-    {
-        "name": "Macrobius",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Macrobius Ambrosius Theodosius was a Roman philosopher and author best known for his work Saturnalia, a compendium of classical knowledge and Neoplatonic philosophy discussed at a festive banquet.",
-        "target_text": "neoplatonism aesthetic, roman aesthetics, sacred geometry, saturnalia, roman philosophical banquets, elite Roman robes, golden frescoes, Roman chandeliers, roman scripts, golden quills"
-    },
-    {
-        "name": "Aulus Gellius",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Aulus Gellius was a Roman author and grammarian known for his work Attic Nights, a miscellany of notes on grammar, philosophy, history, and law, written during long nights of study.",
-        "target_text": "roman attic nights, rustic roman libraries, candlelit study, roman scripts, golden quills, domed ceilings, roman aesthetics"
-    },
-    {
-        "name": "Quintilian",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Marcus Fabius Quintilianus was a Roman rhetorician and educator known for Institutio Oratoria, a comprehensive work on rhetoric and education promoting moral and effective public speaking.",
-        "target_text": "roman classroom aesthetic, orator busts, toga-clad teacher, roman scholar aesthetic, roman scripts, golden quills, Institutio Oratoria"
-    },
-    {
-        "name": "Varro",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Marcus Terentius Varro was a Roman scholar and writer known for his encyclopedic works on agriculture, language, and Roman customs, aiming to preserve traditional Roman knowledge.",
-        "target_text": "roman farms, rustic wisdom, roman scripts, quill art, agricultural mosaics, aged papyrus, terracotta storage, roman agriculture aesthetic, pastoral Rome"
-    },
-    {
-        "name": "Cato the Younger",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Cato the Younger was a Roman senator and Stoic philosopher known for his moral integrity, resistance to Julius Caesar's rise to power, and tragic suicide, which became emblematic of republican virtue.",
-        "target_text": "roman stoicism, roman senator aesthetic, blood-red toga, roman olive crown, roman politics, cold marble halls, julius caesar assassination"
-    },
-    {
-        "name": "Galen",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Galen was a Greek physician and philosopher in the Roman Empire, whose extensive writings on medicine, anatomy, and philosophy influenced Western medical science for over a millennium.",
-        "target_text": "anatomical scrolls, roman healing temples, roman apothecary jars, surgical tools aesthetic, physician robes, classical biology, olive oil infusions, marble dissection table, ancient roman medicine art"
-    },
-    {
-        "name": "Pliny the Elder",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Pliny the Elder was a Roman author and natural philosopher best known for *Naturalis Historia*, one of the largest encyclopedic works of antiquity, covering nature, geography, and human knowledge.",
-        "target_text": "roman naturalist scrolls, volcanic sketches, sailor maps, roman encyclopedias, roman scripts, quill art, marble shelves, nature study, geography aesthetic, nature aesthetic, Naturalis Historia"
-    },
-    {
-        "name": "Celsus",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Aulus Cornelius Celsus was a Roman encyclopedist known for *De Medicina*, one of the best surviving sources on Roman medical knowledge, covering surgery, dietetics, and pharmacology.",
-        "target_text": "roman medicine art, marble anatomy sculptures, surgical tools aesthetic, parchment scrolls, roman healing temples, scholarly robes"
-    },
-    {
-        "name": "Julian the Apostate",
-        "culture_region": "Roman",
-        "role": "Philosopher",
-        "time_period": "Ancient",
-        "bio": "Julian the Apostate was a Roman emperor and philosopher who attempted to revive pagan religions and Neoplatonic philosophy during his short reign, opposing the rise of Christianity in the late Roman Empire.",
-        "target_text": "roman emperor aesthetic, emperor robes, hellenistic temples, bronze laurel crown, torch-lit rituals, neoplatonism, late roman aesthetic, roman pagan revival"
-    },
-    {
-        "name": "Zeus",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Zeus is the king of the Olympian gods in ancient Greek mythology, associated with thunder, the sky, and divine law. He ruled from Mount Olympus and wielded the thunderbolt as his weapon.",
-        "target_text": "thunderbolt aesthetic, marble throne, storm clouds, laurel crown, greek temples, olympian grandeur, classical statues, sky god power, zeus core"
-    },
-    {
-        "name": "Athena",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Athena is the Greek goddess of wisdom, warfare, and crafts. Known for her strategic skill in battle and her patronage of Athens, she is often depicted with an owl and a spear.",
-        "target_text": "owl symbolism, athena core, olive tree iconography, marble wisdom statues, greek helmet, parthenon elegance, golden spear"
-    },
-    {
-        "name": "Apollo",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Apollo is the Greek god of the sun, music, prophecy, and healing. Revered for his beauty and talent, he was associated with the lyre, the Oracle of Delphi, and the arts.",
-        "target_text": "apollo core, sun chariot, golden lyre, laurel crown, delphi temple, marble youth, radiant god aesthetic, glowing horizon"
-    },
-    {
-        "name": "Artemis",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Artemis is the Greek goddess of the hunt, wilderness, and the moon. She is often depicted with a bow and arrows, accompanied by deer, and represents chastity and independence.",
-        "target_text": "artemis core, bow and arrow aesthetic, forest goddess vibes, sacred deer, night hunt aesthetic, moonlit woods, flowing robes, marble statues, temple sanctuaries"
-    },
-    {
-        "name": "Hades",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Hades is the god of the underworld in Greek mythology. He rules over the dead and is associated with wealth, shadows, and the afterlife. He is often depicted with Cerberus, the three-headed dog.",
-        "target_text": "hades core, black marble throne, underworld aesthetic, cerberus, river styx, obsidian textures, gothic temples, dark laurel crown, mythic darkness"
-    },
-    {
-        "name": "Persephone",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Persephone is the Greek goddess of spring and queen of the underworld. Daughter of Demeter, she symbolizes the changing seasons and the cycle of life and death.",
-        "target_text": "persephone core, pomegranate imagery, floral crown, underworld duality, soft marble beauty, spring flowers, goddess of seasons, mythic femininity, life and death aesthetic"
-    },
-    {
-        "name": "Poseidon",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Poseidon is the Greek god of the sea, earthquakes, and horses. He is known for wielding a trident and ruling over oceans and storms from his underwater palace.",
-        "target_text": "poseidon core, trident power, ocean deity, stormy seas, hippocampus creatures, seafoam aesthetic, greek sea temples, coral crowns, aquatic rage"
-    },
-    {
-        "name": "Aphrodite",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Aphrodite is the Greek goddess of love, beauty, and desire. Born from sea foam, she represents romantic allure and is often shown with roses, doves, and flowing robes.",
-        "target_text": "aphrodite core, sea shell aesthetic, rose petals, classical beauty, soft pastels, ocean foam, grecian robes, goddess of love, marble charm"
-    },
-    {
-        "name": "Hermes",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Hermes is the Greek god of travel, trade, communication, and trickery. Known as the messenger of the gods, he wears winged sandals and carries the caduceus.",
-        "target_text": "hermes core, winged sandals, caduceus symbol, golden travel cloak, ancient roads aesthetic, trickster charm aesthetic, messenger aesthetic"
-    },
-    {
-        "name": "Ares",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Ares is the Greek god of war, representing brutal conflict and rage. He is often associated with bloodshed, chaos, and martial valor.",
-        "target_text": "ares core, blood-red armor, iron spear, flaming helmet, marble war statues, greek battlefield aesthetic, spartan rage, war god aesthetic, chaos and valor aesthetic"
-    },
-    {
-        "name": "Hera",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Hera is the queen of the Greek gods and goddess of marriage and family. She is associated with regality, peacocks, and divine authority.",
-        "target_text": "hera core, golden peacocks, regal elegance, marble throne, queen of gods, royal robes, sky palace imagery, goddess temples, divine matriarch"
-    },
-    {
-        "name": "Hephaestus",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Hephaestus is the Greek god of fire, blacksmithing, and craftsmanship. He forged divine weapons and artifacts in his volcanic workshop.",
-        "target_text": "Hephaestus core, forge flames, bronze tools, marble anvil, volcanic forge, mythic firelight, divine blacksmith, metal and stone aesthetic, greek craftsmanship"
-    },
-    {
-        "name": "Dionysus",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Dionysus is the Greek god of wine, ecstasy, theater, and ritual madness. He embodies chaos, creativity, and divine intoxication.",
-        "target_text": "Dionysus core, wine and ivy aesthetic, marble grape vines, ecstatic rituals, theatrical masks, Greek revelry, divine intoxication aesthetic, flowing wine aesthetic"
-    },
-    {
-        "name": "Pandora",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Pandora is the first woman in Greek mythology, created by the gods. Her curiosity led her to open a jar that released all evils into the world.",
-        "target_text": "pandora core, Pandora's box, golden jar, evil aesthetic, feminine mythic beauty, ancient fate, marble symbolism"
-    },
-    {
-        "name": "Medusa",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Medusa is a Gorgon whose hair was made of snakes. Her gaze turned people to stone. Once a beautiful maiden, she became a symbol of cursed power.",
-        "target_text": "snake hair, stone gaze, dark elegance, gorgon power, shattered statues, golden serpent jewelry, mythic horror, Medusa core"
-    },
-    {
-        "name": "Orpheus",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Orpheus is a legendary musician, poet, and prophet who charmed all beings with his lyre. He journeyed to the underworld for his beloved Eurydice.",
-        "target_text": "lyre music, tragic romance, underworld journey, Eurydice motif, poetic sorrow, river Lethe, Orpheus core"
-    },
-    {
-        "name": "Achilles",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Achilles is a Greek hero of the Trojan War and the central figure in Homer’s Iliad. Known for his divine strength and fatal heel.",
-        "target_text": "bronze armor aesthetic, marble heel, divine rage, Greek battlefield, Trojan War aesthetic, spear and shield, Achilles core, heroic fury"
-    },
-    {
-        "name": "Heracles",
-        "culture_region": "Greek",
-        "role": "Mythology",
-        "time_period": "Ancient",
-        "bio": "Heracles, known as Hercules in Roman mythology, is a demigod famed for completing the Twelve Labors. He symbolizes brute strength and heroic endurance.",
-        "target_text": "twelve labors, muscular marble statue, heroic trials, classical arena, lion skin, divine strength, Heracles core, mythic feats"
-    },
-    {
-        "name": "Minamoto no Yoshitsune",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Kamakura Period",
-        "bio": "Minamoto no Yoshitsune was a legendary Japanese general of the late Heian and early Kamakura periods. Renowned for his military genius and tragic end, he became a national folk hero.",
-        "target_text": "samurai aesthetic, katana aesthetics, bamboo forest aesthetic, Kamakura war banners, Japanese scroll art, japanese warrior aesthetic, cherry blossoms, kamakura period art, wandering ronin aesthetic"
-    },
-    {
-        "name": "Tomoe Gozen",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Heian Period",
-        "bio": "Tomoe Gozen was a legendary onna-bugeisha (female warrior) of the late Heian period, known for her bravery, beauty, and mastery of sword and horseback archery.",
-        "target_text": "heian period art, onna-bugeisha elegance, japanese horseback archery, Heian battlefield, cherry blossoms, japanese scroll art, armor aesthetic, japanese ink wash aesthetic"
-    },
-    {
-        "name": "Miyamoto Musashi",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Edo Period",
-        "bio": "Miyamoto Musashi was a legendary swordsman, philosopher, and ronin of the Edo period. He authored *The Book of Five Rings* and is revered as Japan’s greatest duelist.",
-        "target_text": "edo period art, wandering ronin, Zen solitude, bamboo dojo, Edo era philosophy, ink wash aesthetic, Japanese scroll art, calligraphy brush"
-    },
-    {
-        "name": "Oda Nobunaga",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Sengoku Period",
-        "bio": "Oda Nobunaga was a powerful daimyo and unifier of Japan during the Sengoku period. Known for his ruthless tactics and modernization of warfare.",
-        "target_text": "Sengoku war banners, sengoku period art, daimyo aesthetic, tatami battlefield, samurai armor, Japanese ink art, fire and steel, traditional japanese battlefield art"
-    },
-    {
-        "name": "Hattori Hanzō",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Sengoku Period",
-        "bio": "Hattori Hanzō was a legendary ninja and samurai who served Tokugawa Ieyasu. Known for his espionage skills, he became a symbol of stealth and shadow warfare in Japanese history.",
-        "target_text": "sengoku period art, japanese ninja aesthetics, japanese architecture art, black night armor, moonlit infiltration, Tokugawa Ieyasu, japanese ninja weapons aesthetic, samurai aesthetic, shadowy espionage, traditional ninja sandals, japanese ink wash aesthetic"
-    },
-    {
-        "name": "Sanada Yukimura",
-        "culture_region": "Japanese",
-        "role": "Warrior",
-        "time_period": "Sengoku Period",
-        "bio": "Sanada Yukimura was a revered samurai commander during Japan’s Sengoku era, famed for his valor at the Siege of Osaka and loyalty to the Toyotomi clan. He is celebrated as a paragon of samurai honor.",
-        "target_text": "sengoku period art, crimson armor, samurai armor aesthetic, japanese scroll art, burning castles, bamboo battlefield, Siege of Osaka, samurai sacrifice, Toyotomi clan"
-    },
-    {
-        "name": "Cleopatra",
-        "culture_region": "Egyptian",
-        "role": "Royalty",
-        "time_period": "Ptolemaic Dynasty",
-        "bio": "The last active ruler of the Ptolemaic Kingdom of Egypt, Cleopatra VII was known for her intelligence, political acumen, and alliances with Julius Caesar and Mark Antony.",
-        "target_text": "golden diadem, ptolemaic dynasty art, egyptian hieroglyphic art, kohl eyeliner, Nile river aesthetic, egyptian civilization aesthetic, lapis jewelry, papyrus scrolls, royal barge, Egyptian silk robes, pyramid sunset, ancient egyptian jewelery, egyptian queen aesthetic"
-    },
-    {
-        "name": "Nefertiti",
-        "culture_region": "Egyptian",
-        "role": "Royalty",
-        "time_period": "Amarna Period",
-        "bio": "Queen Nefertiti was the Great Royal Wife of Pharaoh Akhenaten and played a prominent religious and political role during the monotheistic Amarna Revolution.",
-        "target_text": "amarna period art, blue crown aesthetic, desert temples, sandstone walls, timeless beauty, golden necklace, egyptian hieroglyphic art, Egyptian columns"
-    },
-    {
-        "name": "Tutankhamun",
-        "culture_region": "Egyptian",
-        "role": "Royalty",
-        "time_period": "18th Dynasty",
-        "bio": "Tutankhamun, often called the 'Boy King,' ascended the throne at a young age and is most famous today for his richly adorned tomb, discovered largely intact in 1922.",
-        "target_text": "18th dynasty egypt aesthetic, golden mask, egyptian tomb, egyptian mummy, burial chamber glow, scarab amulets, royal sarcophagus, lapis and turquoise inlay, Egyptian death rituals, pharaonic aura, candlelit tomb, egyptian gold, egyptian hieroglyphic art, ancient egyptian civilization aesthetic"
-    },
-    {
-        "name": "Ramses II",
-        "culture_region": "Egyptian",
-        "role": "Royalty",
-        "time_period": "19th Dynasty",
-        "bio": "Also known as Ramses the Great, he was one of Egypt’s most powerful and celebrated pharaohs, famed for military victories, monumental construction, and a long reign of 66 years.",
-        "target_text": "18th dynasty egypt aesthetic, egyptian civilization aesthetic, stone colossi, warrior pharaoh, divine sun crown, falcon god motifs, royal decree scrolls, egyptian king aesthetic, hieroglyphic inscriptions, ancient egyptian civilization aesthetic"
-    },
-    {
-        "name": "Hatshepsut",
-        "culture_region": "Egyptian",
-        "role": "Royalty",
-        "time_period": "18th Dynasty",
-        "bio": "Hatshepsut was one of the few female pharaohs and known for a prosperous reign marked by trade expeditions, massive building projects, and peaceful governance.",
-        "target_text": "18th dynasty egypt aesthetic, egyptian queen garb, mortuary temple, sandstone ramps, gold-and-white aesthetic, egyptian trade expedition murals, egyptian queen, ancient egypt aesthetic, stone sphinx path, regal hieroglyphs"
-    },
-    {
-        "name": "Voltaire",
-        "culture_region": "French",
-        "role": "Philosopher",
-        "time_period": "Enlightenment",
-        "bio": "Voltaire was a leading Enlightenment thinker, known for his wit, criticism of the Catholic Church, and advocacy of civil liberties, including freedom of speech and religion.",
-        "target_text": "ink-stained manuscripts, salon conversations, enlightenment france aesthetic, powdered wig aesthetic, candlelit desk art, pastoral elegance, neoclassical busts, revolutionary wit, french literature aesthetic, Enlightenment salons, enlightenment era philosophy, antique quills, wisdom aesthetics, philosophical debates"
-    },
-    {
-        "name": "Jean-Jacques Rousseau",
-        "culture_region": "French",
-        "role": "Philosopher",
-        "time_period": "Enlightenment",
-        "bio": "Rousseau was a political philosopher and writer whose ideas on education, individual freedom, and the social contract heavily influenced the French Revolution and modern political theory.",
-        "target_text": "pastoral elegance, worn parchment scrolls, enlightenment nature, rustic study room, ink on linen, botanical sketches, french revolution aesthetics, candlelight reflections, handwritten treatises"
-    },
-    {
-        "name": "Montesquieu",
-        "culture_region": "French",
-        "role": "Philosopher",
-        "time_period": "Enlightenment",
-        "bio": "Montesquieu was a French political philosopher best known for his theory of the separation of powers, which deeply influenced modern constitutions and democratic governance.",
-        "target_text": "separation of powers scrolls, pastoral elegance, Parisian library halls, legal parchment, velvet cloaks, aged bookcases, court aesthetic, candlelit law chamber, enlightenment symbolism, neoclassical interior, democracy aesthetics, political philosophy"
-    },
-    {
-        "name": "Denis Diderot",
-        "culture_region": "French",
-        "role": "Philosopher",
-        "time_period": "Enlightenment",
-        "bio": "Diderot was a philosopher, writer, and chief editor of the Encyclopédie, a monumental Enlightenment work that aimed to catalog human knowledge and promote reason.",
-        "target_text": "encyclopedia pages, quill art, intellectual clutter, printing press charm, coffee-stained philosophy, enlightenment paper stacks, vintage typography, publishing aesthetic, revolutionary bookshelf, philosophy aesthetic, enlightenment era philosophy, enlightenment salons"
-    },
-    {
-        "name": "Martin Luther King Jr.",
-        "culture_region": "American",
-        "role": "Revolutionary",
-        "time_period": "20th Century",
-        "bio": "Martin Luther King Jr. was a Baptist minister and civil rights leader who advocated nonviolent resistance against racial segregation and injustice in the United States. He is best known for his 'I Have a Dream' speech and leadership in the Montgomery Bus Boycott, March on Washington, and Selma to Montgomery marches.",
-        "target_text": "civil rights marches, vintage microphones, black and white protest signs, peace doves, equality posters, vintage suits, historical speeches, justice symbolism, powerful oratory, 20th century american history, I have a dream aesthetic, black and white photography"
-    },
-    {
-        "name": "Malcolm X",
-        "culture_region": "American",
-        "role": "Revolutionary",
-        "time_period": "20th Century",
-        "bio": "Malcolm X was an African-American Muslim minister and human rights activist known for his powerful advocacy of black empowerment and self-determination. He was a prominent figure in the Nation of Islam before founding the Organization of Afro-American Unity and shifting toward a more inclusive approach to civil rights.",
-        "target_text": "black empowerment posters, Nation of Islam aesthetics, urban revolutionary mood, sharp suits, bold typography, protest portraits, civil rights marches, militant resistance"
-    },
-    {
-        "name": "Wu Daozi",
-        "culture_region": "Chinese",
-        "role": "Painter",
-        "time_period": "Tang Dynasty",
-        "bio": "Wu Daozi was a legendary Chinese painter of the Tang Dynasty, celebrated for his dynamic brushwork and expressive murals. Often called the 'Sage of Painting,' he specialized in Buddhist imagery and revolutionized Chinese figure painting.",
-        "target_text": "tang dynasty art, flying apsaras, Tang lifestyle art, chinese brushstrokes, mural elegance, Buddhist chinese frescoes, flowing robes, chinese ancient art, ink rhythm"
-    },
-    {
-        "name": "Yan Liben",
-        "culture_region": "Chinese",
-        "role": "Painter",
-        "time_period": "Tang Dynasty",
-        "bio": "Yan Liben was a court painter and official during the early Tang Dynasty. He is best known for imperial portraits and historical scrolls, and served as a high-ranking bureaucrat under Emperor Taizong.",
-        "target_text": "chinese court portraits, Tang dynasty robes, chinese imperial processions, tang dynasty art, ceremonial art, golden horses, chinese historical scrolls, chinese royalty aesthetic"
-    },
-    {
-        "name": "Zhang Xuan",
-        "culture_region": "Chinese",
-        "role": "Painter",
-        "time_period": "Tang Dynasty",
-        "bio": "Zhang Xuan was known for his paintings of court ladies and everyday aristocratic life. His works reflected Tang ideals of beauty and refinement and often focused on feminine elegance and seasonal festivities.",
-        "target_text": "court lady aesthetics, elegant Tang hairstyles, east asian art aesthetics, chinese aristocratic women, silk scrolls, tang dynasty art, feminine grace, chinese historical fashion art, poetic scenes"
-    },
-    {
-        "name": "Zhou Fang",
-        "culture_region": "Chinese",
-        "role": "Painter",
-        "time_period": "Tang Dynasty",
-        "bio": "Zhou Fang was a painter in the mid to late Tang Dynasty, renowned for blending religious themes with depictions of aristocratic women. His works helped set the standard for feminine beauty in Chinese art for centuries.",
-        "target_text": "chinese aristocratic women, floral robes, gentle expressionism, ink and silk beauty, elegant femininity, indoor scenes, Tang lifestyle art"
-    },
-    {
-        "name": "Ibn Sina",
-        "culture_region": "Persian",
-        "role": "Scientist",
-        "time_period": "Medieval Islamic Golden Age",
-        "bio": "Also known as Avicenna, Ibn Sina was a Persian polymath whose works in medicine, philosophy, and science became foundational in both Islamic and European traditions. His 'Canon of Medicine' remained a standard medical text for centuries.",
-        "target_text": "muslim intellectual gatherings aesthetics, medieval islamic golden age, islamic medicine aesthetic, scholar circles, aged scrolls, muslim scientist aesthetic, Persian ink realism, polymath aesthetics, Canon of Medicine, golden age of islamic science, persian calligraphy, medieval Persian architecture, Persian gardens"
-    },
-    {
-        "name": "Ibn al-Haytham",
-        "culture_region": "Persian",
-        "role": "Scientist",
-        "time_period": "Medieval Islamic Golden Age",
-        "bio": "Known as Alhazen in the West, Ibn al-Haytham was a pioneering physicist and mathematician whose groundbreaking work on optics laid the foundation for the modern scientific method. Though born in present-day Iraq, his contributions strongly influenced Persian and Islamic science.",
-        "target_text": "islamic optics aesthetic, light refraction diagrams aesthetic, ancient camera obscura, glowing manuscripts, golden age of islam, persian astronomy, islamic architecture, persian architecture, persian calligraphy"
-    },
-    {
-        "name": "Al-Biruni",
-        "culture_region": "Persian",
-        "role": "Scientist",
-        "time_period": "Medieval Islamic Golden Age",
-        "bio": "Al-Biruni was a brilliant Persian scientist and philosopher who made major contributions in astronomy, mathematics, physics, geography, and cultural studies. He was one of the first to propose that the Earth rotates on its axis.",
-        "target_text": "cosmology maps, golden age of islam, islamic scientist aesthetic, inked planetary diagrams, ancient globes, Persian science scrolls, golden horizon, stargazing traditions, timekeeping instruments "
-    },
-    {
-        "name": "Leonardo da Vinci",
-        "culture_region": "Italian",
-        "role": "Painter",
-        "time_period": "Renaissance",
-        "bio": "Leonardo da Vinci was a polymath of the Italian Renaissance known for his mastery in painting, science, engineering, and anatomy. His works such as the 'Mona Lisa' and 'The Last Supper' exemplify the ideals of Renaissance humanism and vitruvian principles.",
-        "target_text": "oil sketch studies, Vitruvian aesthetics, golden halos, marble realism, anatomy sketches, flying machines, Renaissance symmetry, Mona Lisa, The Last Supper, renaissance art, renaissance architecture, renaissance science"
-    },
-    {
-        "name": "Michelangelo",
-        "culture_region": "Italian",
-        "role": "Painter",
-        "time_period": "Renaissance",
-        "bio": "Michelangelo was a towering figure of the Italian Renaissance, renowned for his sculpture, painting, and architectural genius. He is best known for the Sistine Chapel ceiling, the statue of David, and his dynamic use of human anatomy and emotion in art.",
-        "target_text": "Sistine Chapel details, ceiling frescoes, stone textures, sculptural light, David statue, renaissance art, renaissance sculpture, renaissance painting"
-    },
-    {
-        "name": "Frida Kahlo",
-        "culture_region": "Mexican",
-        "role": "Painter",
-        "time_period": "20th Century, Modern Art",
-        "bio": "Frida Kahlo was a Mexican painter best known for her deeply personal self-portraits and exploration of identity, postcolonialism, gender, and pain. Her art blends surrealism with Mexican folk culture, creating a unique and symbolic visual language.",
-        "target_text": "floral headpieces, folk surrealism, embroidered corsets, mexican identity, Kahlo aesthetics"
-    },
-    {
-        "name": "Claude Monet",
-        "culture_region": "French",
-        "role": "Painter",
-        "time_period": "19th–20th Century, Impressionist Era",
-        "bio": "Claude Monet was a founding figure of the French Impressionist movement. He is celebrated for his use of light, color, and fleeting impressions in natural settings, especially in his famous series of water lilies and the gardens of Giverny.",
-        "target_text": "water lily gardens, foggy mornings, plein air palettes, pastel reflections, French Impressionist aesthetic, dreamy Impressionism, Giverny calm"
-    },
-    {
-        "name": "Pablo Picasso",
-        "culture_region": "Spanish",
-        "role": "Painter",
-        "time_period": "20th Century, Cubist Era",
-        "bio": "Pablo Picasso was a revolutionary Spanish artist whose work spanned painting, sculpture, and ceramics. He co-founded Cubism and pushed the boundaries of visual form through periods like the Blue Period, Rose Period, and his influential work on 'Guernica.'",
-        "target_text": "cubist abstractions, shattered perspectives, blue period sorrow, studio chaos, geometric emotion, fragmented forms, Picasso aesthetics"
-    },
-    {
-        "name": "Vladimir Lenin",
-        "culture_region": "Russian",
-        "role": "Revolutionary",
-        "time_period": "20th Century",
-        "bio": "Vladimir Lenin was the leader of the Bolshevik Party and a key figure in the Russian Revolution of 1917. He became the head of the Soviet state and laid the ideological and political foundation for communism in the USSR.",
-        "target_text": "hammer silhouettes, snowy barricades, Bolshevik aesthetics, russian revolution aesthetics, communism, industrial grays, soviet union aesthetic, russia WWI aesthetics"
-    },
-    {
-        "name": "Nelson Mandela",
-        "culture_region": "South African",
-        "role": "Revolutionary",
-        "time_period": "20th Century",
-        "bio": "Nelson Mandela was a South African anti-apartheid revolutionary who became the first Black president of South Africa. He spent 27 years in prison for his activism and became a global icon of peace, reconciliation, and justice.",
-        "target_text": "aesthetic prison bars, Robben Island walls, courtroom resistance aesthetics, south africa apartheid struggle, rainbow nation"
-    },
-    {
-        "name": "Bhagat Singh",
-        "culture_region": "Indian",
-        "role": "Revolutionary",
-        "time_period": "20th Century",
-        "bio": "Bhagat Singh was an Indian revolutionary socialist who became a symbol of youth rebellion against British colonial rule. Known for his radical activism and martyrdom, he inspired generations of freedom fighters in India.",
-        "target_text": "British jail cell shadows, indian architecture, paper bombs, turbaned defiance, ink-and-blood manifestos, british colonial resistance, british india aesthetics, british india"
-    },
-    {
-        "name": "Mahatma Gandhi",
-        "culture_region": "Indian",
-        "role": "Freedom Leader",
-        "time_period": "20th Century",
-        "bio": "Mahatma Gandhi was a leader of India’s nonviolent independence movement against British rule. He pioneered civil disobedience and satyagraha, emphasizing self-reliance, khadi cloth, and peaceful protest as tools of resistance.",
-        "target_text": "handspun khadi cloth, round spectacles, spinning wheels, british india aesthetics, Hinduism, nonviolent resistance"
-    },
-    {
-        "name": "King George V",
-        "culture_region": "British",
-        "role": "Royalty",
-        "time_period": "World War I",
-        "bio": "King George V was the King of the United Kingdom during World War I and the first monarch of the House of Windsor. His reign saw the transformation of the British Empire during global conflict and major political changes.",
-        "target_text": "military medals, world war I, Edwardian uniforms, world war I british royals, palace war rooms, crown insignia, wartime diplomacy, British Empire symbols, world war I uniforms,british monarchy aesthetics"
-    },
-    {
-        "name": "King Edward VIII",
-        "culture_region": "British",
-        "role": "Royalty",
-        "time_period": "World War II",
-        "bio": "King Edward VIII was the British monarch who famously abdicated the throne in 1936 to marry Wallis Simpson, an American divorcée. His short reign and abdication caused a constitutional crisis and led to his lifelong exile.",
-        "target_text": "King Edward VIII abdication, luxury exile, tailored suits, controversial romance, regal melancholy, postwar aristocracy, Windsor style"
-    },
-    {
-        "name": "Queen Elizabeth II",
-        "culture_region": "British",
-        "role": "Royalty",
-        "time_period": "World War II, Post-War Era",
-        "bio": "Queen Elizabeth II ascended the throne in 1952 and became the longest-reigning monarch in British history. As a princess, she served in the Auxiliary Territorial Service during World War II. Her reign symbolized continuity and tradition in a changing world.",
-        "target_text": "wartime service uniform, british royal coronation, birmingham palace aesthetic, crown jewels, british crown, 1950s england aesthetic, corgi companionship, christianity, windsor castle aesthetics, british monarchy aesthetic"
-    },
-    {
-        "name": "Kaiser Wilhelm II",
-        "culture_region": "German",
-        "role": "Royalty",
-        "time_period": "World War I",
-        "bio": "Kaiser Wilhelm II was the last German Emperor and King of Prussia, ruling from 1888 until his abdication in 1918. A key figure during World War I, his militarism and leadership were pivotal in the war’s outbreak.",
-        "target_text": "Prussian helmets, Prussian empire, world war I Germany aesthetics, military regalia, prussian royals, iron cross aesthetics, fallen empire"
-    },
-    {
-        "name": "Tsar Nicholas II",
-        "culture_region": "Russian",
-        "role": "Royalty",
-        "time_period": "World War I",
-        "bio": "Tsar Nicholas II was the last Emperor of Russia. His reign ended with the Russian Revolution, which led to the collapse of the Romanov dynasty. He and his family were executed by the Bolsheviks in 1918.",
-        "target_text": "Romanov opulence, romanov aesthetic, world war I russian, russian revolution aesthetics, orthodox icons, tragic royalty, tsar asthetics, snowy palaces, revolution shadows"
-    },
-    {
-        "name": "Queen Victoria",
-        "culture_region": "British",
-        "role": "Royalty",
-        "time_period": "19th Century",
-        "bio": "Queen Victoria ruled the United Kingdom from 1837 to 1901. Her reign, the Victorian Era, was marked by industrial, cultural, and imperial expansion. She became a global symbol of British values and the head of a vast empire.",
-        "target_text": "black mourning dress, british royalty art, british empire aesthetics, empire map motifs, Victorian parlors, victorian england, steampunk elegance, stiff portraits, aristocratic elegance, Victorian fashion"
-    },
-    {
-        "name": "Marie Antoinette",
-        "culture_region": "French",
-        "role": "Royalty",
-        "time_period": "18th Century",
-        "bio": "Marie Antoinette was the Queen of France and the wife of King Louis XVI. Known for her lavish lifestyle and perceived indifference to the struggles of the French people, she became a symbol of royal excess during the French Revolution and was executed by guillotine in 1793.",
-        "target_text": "rococo elegance, extravagant weatlh visuals, Pre-revolution France, pastel gowns, pearl jewelry, palace gardens, decadent cakes, powdered hairstyles, versailles aesthetic, french revolution aesthetic"
-    },
-    {
-        "name": "Napoleon Bonaparte",
-        "culture_region": "French",
-        "role": "Royalty",
-        "time_period": "18th Century",
-        "bio": "Napoleon Bonaparte was a French military leader who rose to power during the French Revolution and declared himself Emperor of the French. He led numerous military campaigns across Europe, dramatically reshaping European politics before his defeat and exile.",
-        "target_text": "french revolution, imperial laurel wreaths, battlefield glory, french kingdom aesthetic, napoleonic era, conquest maps, neoclassical power, french battlefield art, napolean army military uniforms, french empire"
-    },
-    {
-        "name": "Jon Snow",
-        "culture_region": "Fantasy (Westeros)",
-        "role": "Knight",
-        "time_period": "Fantasy Medieval",
-        "bio": "Jon Snow is a central character in George R.R. Martin's *A Song of Ice and Fire* series and HBO's *Game of Thrones*. He is raised as the illegitimate son of Eddard Stark and later revealed to have royal Targaryen lineage. Known for his sense of honor and leadership, he plays a key role in the battle between the living and the dead.",
-        "target_text": "snow-covered armor, direwolf imagery, cold landscapes, black cloaks, brooding castle walls, medieval swords"
-    },
-    {
-        "name": "Loki",
-        "culture_region": "Norse Mythology",
-        "role": "Trickster God",
-        "time_period": "Mythological Era",
-        "bio": "Loki is a shape-shifting trickster god in Norse mythology, known for his cunning, chaos, and complex morality. He is associated with mischief and deception but also plays roles in key mythological events such as the birth of monsters and the coming of Ragnarok.",
-        "target_text": "horned helmet, illusion magic, green-gold motifs, mischief aesthetic, swirling portals, Nordic patterns, loki core"
-    },
-    {
-        "name": "Batman",
-        "culture_region": "American Fiction",
-        "role": "Vigilante",
-        "time_period": "Modern",
-        "bio": "Batman, also known as Bruce Wayne, is a fictional superhero created by Bob Kane and Bill Finger for DC Comics. A wealthy industrialist who witnessed the murder of his parents, he dons a bat-themed costume to fight crime in Gotham City using intellect, gadgets, and martial arts.",
-        "target_text": "gothic skyscrapers, bat signal, dark knight silhouette, noir crime scenes, black cape aesthetic, urban shadows, noir aesthetics, Gotham City"
-    },
-    {
-        "name": "Sherlock Holmes",
-        "culture_region": "British Fiction",
-        "role": "Detective",
-        "time_period": "Victorian Era",
-        "bio": "Sherlock Holmes is a fictional detective created by Sir Arthur Conan Doyle. Known for his exceptional powers of observation and logical reasoning, he solved complex cases across Victorian London alongside his companion Dr. Watson.",
-        "target_text": "London fog, magnifying glass aesthetic, vintage pipe, detective notebooks, Victorian streets, mystery wallpaper, crime scene diagrams, victorian detective aesthetic, victorian crime scene"
-    },
-    {
-        "name": "Elizabeth Bennet",
-        "culture_region": "British Fiction",
-        "role": "Heroine",
-        "time_period": "Regency Era",
-        "bio": "Elizabeth Bennet is the intelligent and spirited protagonist of Jane Austen's novel *Pride and Prejudice*. She navigates societal pressures, family expectations, and romantic entanglements in early 19th-century England, ultimately challenging norms of class and gender.",
-        "target_text": "pastel gowns, jane austen aesthetics, countryside elegance, handwritten letters, vintage romance, garden walks, classic novels aesthetic, candlelit reading, pride and prejudice aesthetics"
-    },
-    {
-        "name": "Harry Potter",
-        "culture_region": "British Fiction",
-        "role": "Wizard",
-        "time_period": "Modern Fantasy (1990s)",
-        "bio": "Harry Potter is the protagonist of J.K. Rowling's famous fantasy series. An orphaned boy who discovers he is a wizard, he attends Hogwarts School of Witchcraft and Wizardry and becomes central in the fight against the dark wizard Voldemort.",
-        "target_text": "wizard robes, floating candles, spell books, Hogwarts castle, magical maps, owl imagery, enchanted aesthetic, potion bottles, wizarding world aesthetics"
-    },
-    {
-        "name": "Frodo Baggins",
-        "culture_region": "Middle-earth Fiction",
-        "role": "Hero",
-        "time_period": "Fantasy Medieval",
-        "bio": "Frodo Baggins is a hobbit from J.R.R. Tolkien’s *The Lord of the Rings* trilogy. Tasked with destroying the One Ring, he embarks on an epic journey across Middle-earth, facing immense trials while symbolizing endurance and moral courage.",
-        "target_text": "Shire greenery, elvish scripts, ancient maps, hobbit holes, rustic satchels, middle earth journey aesthetics, fantasy landscapes, hobbit aesthetic, Middle-earth aesthetics"
-    },
-    {
-        "name": "Black Panther",
-        "culture_region": "Afrofuturism",
-        "role": "Superhero King",
-        "time_period": "Futuristic (Marvel Universe)",
-        "bio": "Black Panther, also known as T'Challa, is a Marvel Comics superhero and the king of Wakanda, a fictional African nation with advanced technology and culture. He embodies Afrofuturism and balances royal duty with heroic responsibility, fighting to protect both his people and the world.",
-        "target_text": "vibranium glow, Afrofuturism, panther statues, Wakandan skyline, black panther aesthetic, black-gold strength"
-    },
-    {
-        "name": "Captain America",
-        "culture_region": "American Fiction",
-        "role": "Super Soldier",
-        "time_period": "World War II and Modern",
-        "bio": "Captain America, or Steve Rogers, is a Marvel Comics superhero originally created as a patriotic supersoldier during World War II. After being frozen in ice, he awakens in the modern era and continues to serve as a moral leader and defender of justice in the Avengers.",
-        "target_text": "vintage war posters, star shield motif, patriotic tones, 1940s fashion, military aesthetics, red-white-blue color scheme, captain america shield"
-    },
-    {
-        "name": "Spider-Man",
-        "culture_region": "American Fiction",
-        "role": "Teen Hero",
-        "time_period": "Modern",
-        "bio": "Spider-Man, aka Peter Parker, is a Marvel Comics superhero known for his agility, intellect, and wit. Gaining spider-like abilities from a radioactive bite, he juggles his teenage life in New York City with crime-fighting, often exploring themes of responsibility and personal growth.",
-        "target_text": "city rooftops, web patterns, red-blue contrast, photography gear, youthful heroism, NYC aesthetics, spider webs, spiderman aesthetics, spiderman comics"
-    },
-    {
-        "name": "Elon Musk",
-        "culture_region": "Global",
-        "role": "Tech Entrepreneur",
-        "time_period": "21st Century",
-        "bio": "Elon Musk is a visionary entrepreneur and engineer known for founding and leading companies like SpaceX, Tesla, Neuralink, and The Boring Company. He is a central figure in space exploration, electric vehicles, and futuristic innovations, often aiming to reshape the future of humanity.",
-        "target_text": "rocket launches, SpaceX, futuristic cities, Tesla minimalism, Mars colonization, cyberpunk innovation, neural networks aesthetic"
-    },
-    {
-        "name": "Jeff Bezos",
-        "culture_region": "Global",
-        "role": "Tech Entrepreneur",
-        "time_period": "21st Century",
-        "bio": "Jeff Bezos is the founder of Amazon and a major figure in the e-commerce and cloud computing revolutions. Under his leadership, Amazon became one of the world’s most powerful tech companies. He also founded Blue Origin, a space exploration company focused on commercial space travel.",
-        "target_text": "ecommerce empire, Amazon innovation, cloud servers, warehouse drones, Blue Origin rockets, modern capitalism aesthetic"
-    },
-    {
-        "name": "Mark Zuckerberg",
-        "culture_region": "Global",
-        "role": "Tech Entrepreneur",
-        "time_period": "21st Century",
-        "bio": "Mark Zuckerberg is the co-founder and CEO of Meta (formerly Facebook), a company that transformed global social interaction. He has expanded into virtual reality and the metaverse, aiming to shape the future of human connection through digital environments.",
-        "target_text": "social networks, facebook aesthetic, virtual reality headsets, metaverse design, hoodie simplicity, blue tech visuals, digital connection themes, social media aesthetics"
-    },
-    {
-        "name": "Steve Jobs",
-        "culture_region": "Global",
-        "role": "Tech Entrepreneur",
-        "time_period": "Late 20th – Early 21st Century",
-        "bio": "Steve Jobs was the co-founder and iconic leader of Apple Inc. He revolutionized consumer electronics with the Macintosh, iPod, iPhone, and iPad, pioneering sleek product design and intuitive user interfaces. Jobs is remembered as a visionary who merged technology with artistry.",
-        "target_text": "black turtleneck symbolism, Apple minimalism, glass design language, innovation mindset, tech simplicity, keynote aesthetics"
-    },
-    {
-        "name": "Bill Gates",
-        "culture_region": "Global",
-        "role": "Tech Entrepreneur",
-        "time_period": "Late 20th – 21st Century",
-        "bio": "Bill Gates is the co-founder of Microsoft and a pivotal figure in the personal computing revolution. After transitioning from tech, he became a leading philanthropist through the Bill & Melinda Gates Foundation, focusing on global health, education, and sustainability.",
-        "target_text": "early Windows UI, Gates Foundation visuals, global innovation maps, philanthro-tech, vintage coding, legacy software symbolism"
-    },
-    {
-        "name": "Nikola Tesla",
-        "culture_region": "Serbian-American",
-        "role": "Engineer",
-        "time_period": "Industrial Era",
-        "bio": "Nikola Tesla was a brilliant inventor, physicist, and electrical engineer known for his revolutionary contributions to alternating current (AC) electricity, wireless transmission, and electromagnetism. His eccentric persona and visionary experiments have made him a symbol of scientific genius and innovation.",
-        "target_text": "lightning coils, retro lab experiments, old-world electricity, eccentric genius mood, Victorian tech fusion, plasma energy, electrical engineering aesthetics"
-    },
-    {
-        "name": "Friedrich Nietzsche",
-        "culture_region": "German",
-        "role": "Philosopher",
-        "time_period": "Late 19th Century",
-        "bio": "Friedrich Nietzsche was a German philosopher known for his provocative critiques of morality, religion, and culture. He developed influential ideas like the Übermensch, eternal recurrence, and the famous proclamation 'God is dead', shaping existentialist and postmodern thought.",
-        "target_text": "existential shadows, overgrown ruins, lone thinkers, typewritten aphorisms, Existential nihilism, mountain solitude, vintage philosophy books, God is dead quote"
-    },
-    {
-        "name": "Karl Marx",
-        "culture_region": "German",
-        "role": "Philosopher",
-        "time_period": "Industrial Era",
-        "bio": "Karl Marx was a German philosopher, economist, and revolutionary socialist. He co-authored 'The Communist Manifesto' and developed the theory of historical materialism, laying the foundation for Marxism and influencing global politics and labor movements.",
-        "target_text": "19th century germany aesthetic, industrial smokestacks, tattered manifestos, working-class symbolism, marxism aesthetic, ink-stained revolutions, dim factories, red banners, utopian blueprints, Communist Manifesto"
-    },
-    {
-        "name": "John Locke",
-        "culture_region": "British",
-        "role": "Philosopher",
-        "time_period": "Enlightenment Era",
-        "bio": "John Locke was a British philosopher widely regarded as the father of liberalism. His writings on natural rights, the social contract, and empiricism profoundly shaped Enlightenment thought and the development of modern democratic theory.",
-        "target_text": "17th century quill writing, 17th century britain aesthetic, Enlightenment parlors, aged parchment, vintage inkwell collections, candlelit essays"
-    },
-    {
-        "name": "Al-Ghazali",
-        "culture_region": "Persian",
-        "role": "Philosopher",
-        "time_period": "Islamic Golden Age",
-        "bio": "Al-Ghazali was a Persian philosopher, theologian, jurist, and mystic whose works bridged Islamic theology and Sufi spirituality. His writings, especially 'The Incoherence of the Philosophers', profoundly influenced Islamic thought and integrated reason with faith.",
-        "target_text": "Islamic Golden Age, Sufi mysticism, divine geometry, modest lamps, ash-colored wisdom, arabic calligraphy, islamic philosophy"
-    },
-    {
-        "name": "Ibn Khaldun",
-        "culture_region": "Maghrebi",
-        "role": "Philosopher-Historian",
-        "time_period": "Medieval Islamic Era",
-        "bio": "Ibn Khaldun was a North African historian, philosopher, and sociologist, best known for his pioneering work 'Muqaddimah'. He introduced early concepts of historiography, economics, and the cyclical nature of civilizations.",
-        "target_text": "arabic calligraphy, islamic golden age, Muqaddimah manuscript, cyclical history maps, history maps aesthetic, Maghreb medinas"
-    },
-    {
-        "name": "Vincent van Gogh",
-        "culture_region": "Dutch",
-        "role": "Painter",
-        "time_period": "Post-Impressionist Era",
-        "bio": "Vincent van Gogh was a Dutch post-impressionist painter whose emotionally charged and vibrant works, like 'Starry Night' and 'Sunflowers', deeply influenced modern art. His expressive brushwork and turbulent life became symbols of the tortured artistic soul.",
-        "target_text": "swirling night skies, sunflower madness, post-impressionist brushwork, rustic solitude, bandaged self-portraits, emotional texture, van gogh aesthetics, starry night, vibrant yellows"
-    },
-    {
+  {
+    "name": "Seneca",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. His writings explore ethics, virtue, and resilience under adversity.",
+    "target_text": "roman stoicism, candlelit study, Roman philosophy aesthetic, marble busts, ancient roman libraries, Roman villas, roman statesman aesthetic"
+  },
+  {
+    "name": "Epictetus",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Epictetus was a former slave turned Stoic philosopher whose teachings, recorded by his student Arrian, emphasize self-mastery, rationality, and acceptance of fate.",
+    "target_text": "roman stoicism, minimalist quarters, ancient rome aesthetic, Roman sandals, rustic libraries aesthetic, philosophy of fate, inner peace"
+  },
+  {
+    "name": "Marcus Aurelius",
+    "culture_region": "Roman",
+    "role": "Philosopher, Emperor",
+    "time_period": "Ancient",
+    "bio": "Marcus Aurelius was a Roman emperor and Stoic philosopher best known for his 'Meditations', a personal reflection on leadership, duty, and virtue.",
+    "target_text": "roman stoicism, golden laurel crown aesthetic, Roman armor, battlefield wisdom, marble palace, emperor philosopher, Meditations, ancient leadership, stoic strength"
+  },
+  {
+    "name": "Lucretius",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Titus Lucretius Carus was a Roman poet and philosopher who authored 'On the Nature of Things', explaining Epicurean atomism and natural philosophy.",
+    "target_text": "atomist diagrams aesthetic, On the Nature of Things, Roman gardens aesthetic, rustic libraries aesthetic, terracotta jars aesthetic, nature worship aesthetic, countryside temples aesthetic, roman science aesthetic, ancient elements aesthetic"
+  },
+  {
+    "name": "Boethius",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Middle Ages",
+    "bio": "Anicius Manlius Severinus Boethius was a Roman senator and philosopher best known for his work 'The Consolation of Philosophy', written while imprisoned, blending classical thought with early medieval Christian ideas.",
+    "target_text": "stone prison walls, The Consolation of Philosophy, melancholic marble, dim candlelight, chained wisdom, middle ages roman aesthetics, introspective solitude, medieval christianity"
+  },
+  {
+    "name": "Plotinus",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Plotinus was a major philosopher of late antiquity and founder of Neoplatonism. His metaphysical writings emphasize the One, the soul’s ascent, and mystical union with higher reality.",
+    "target_text": "neoplatonism aesthetic, sacred geometry, quill art, Roman temple glow, mystical scrolls, celestial frescoes, star mosaics, spiritual ascent, metaphysical aura, mystical aesthetics, roman philosophy aesthetic"
+  },
+  {
+    "name": "Porphyry",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Porphyry was a Neoplatonist philosopher and student of Plotinus, known for systematizing his teacher’s ideas and writing on metaphysics, vegetarianism, and theurgy.",
+    "target_text": "neoplatonism aesthetic, roman aesthetics, sacred geometry, divine aesthetics, geometric mosaics, theurgy symbols, quill art, philosopher's study, metaphysical art"
+  },
+  {
+    "name": "Musonius Rufus",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Musonius Rufus was a Roman Stoic philosopher who emphasized practical ethics, the equality of women in philosophy, and simple rural living as the ideal life.",
+    "target_text": "roman stoicism, roman scripts, golden quills aesthetics, stoic countryside, ancient rome countryside, vine-covered pergolas, roman rustic villas, terracotta rooftops, serene philosophy"
+  },
+  {
+    "name": "Macrobius",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Macrobius Ambrosius Theodosius was a Roman philosopher and author best known for his work Saturnalia, a compendium of classical knowledge and Neoplatonic philosophy discussed at a festive banquet.",
+    "target_text": "neoplatonism aesthetic, roman aesthetics, sacred geometry, saturnalia, roman philosophical banquets, elite Roman robes, golden frescoes, Roman chandeliers, roman scripts, golden quills"
+  },
+  {
+    "name": "Aulus Gellius",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Aulus Gellius was a Roman author and grammarian known for his work Attic Nights, a miscellany of notes on grammar, philosophy, history, and law, written during long nights of study.",
+    "target_text": "roman attic nights, rustic roman libraries, candlelit study, roman scripts, golden quills, domed ceilings, roman aesthetics"
+  },
+  {
+    "name": "Quintilian",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Marcus Fabius Quintilianus was a Roman rhetorician and educator known for Institutio Oratoria, a comprehensive work on rhetoric and education promoting moral and effective public speaking.",
+    "target_text": "roman classroom aesthetic, orator busts, toga-clad teacher, roman scholar aesthetic, roman scripts, golden quills, Institutio Oratoria"
+  },
+  {
+    "name": "Varro",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Marcus Terentius Varro was a Roman scholar and writer known for his encyclopedic works on agriculture, language, and Roman customs, aiming to preserve traditional Roman knowledge.",
+    "target_text": "roman farms, rustic wisdom, roman scripts, quill art, agricultural mosaics, aged papyrus, terracotta storage, roman agriculture aesthetic, pastoral Rome"
+  },
+  {
+    "name": "Cato the Younger",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Cato the Younger was a Roman senator and Stoic philosopher known for his moral integrity, resistance to Julius Caesar's rise to power, and tragic suicide, which became emblematic of republican virtue.",
+    "target_text": "roman stoicism, roman senator aesthetic, blood-red toga, roman olive crown, roman politics, cold marble halls, julius caesar assassination"
+  },
+  {
+    "name": "Galen",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Galen was a Greek physician and philosopher in the Roman Empire, whose extensive writings on medicine, anatomy, and philosophy influenced Western medical science for over a millennium.",
+    "target_text": "anatomical scrolls, roman healing temples, roman apothecary jars, surgical tools aesthetic, physician robes, classical biology, olive oil infusions, marble dissection table, ancient roman medicine art"
+  },
+  {
+    "name": "Pliny the Elder",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Pliny the Elder was a Roman author and natural philosopher best known for *Naturalis Historia*, one of the largest encyclopedic works of antiquity, covering nature, geography, and human knowledge.",
+    "target_text": "roman naturalist scrolls, volcanic sketches, sailor maps, roman encyclopedias, roman scripts, quill art, marble shelves, nature study, geography aesthetic, nature aesthetic, Naturalis Historia"
+  },
+  {
+    "name": "Celsus",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Aulus Cornelius Celsus was a Roman encyclopedist known for *De Medicina*, one of the best surviving sources on Roman medical knowledge, covering surgery, dietetics, and pharmacology.",
+    "target_text": "roman medicine art, marble anatomy sculptures, surgical tools aesthetic, parchment scrolls, roman healing temples, scholarly robes"
+  },
+  {
+    "name": "Julian the Apostate",
+    "culture_region": "Roman",
+    "role": "Philosopher",
+    "time_period": "Ancient",
+    "bio": "Julian the Apostate was a Roman emperor and philosopher who attempted to revive pagan religions and Neoplatonic philosophy during his short reign, opposing the rise of Christianity in the late Roman Empire.",
+    "target_text": "roman emperor aesthetic, emperor robes, hellenistic temples, bronze laurel crown, torch-lit rituals, neoplatonism, late roman aesthetic, roman pagan revival"
+  },
+  {
+    "name": "Zeus",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Zeus is the king of the Olympian gods in ancient Greek mythology, associated with thunder, the sky, and divine law. He ruled from Mount Olympus and wielded the thunderbolt as his weapon.",
+    "target_text": "thunderbolt aesthetic, marble throne, storm clouds, laurel crown, greek temples, olympian grandeur, classical statues, sky god power, zeus core"
+  },
+  {
+    "name": "Athena",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Athena is the Greek goddess of wisdom, warfare, and crafts. Known for her strategic skill in battle and her patronage of Athens, she is often depicted with an owl and a spear.",
+    "target_text": "owl symbolism, athena core, olive tree iconography, marble wisdom statues, greek helmet, parthenon elegance, golden spear"
+  },
+  {
+    "name": "Apollo",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Apollo is the Greek god of the sun, music, prophecy, and healing. Revered for his beauty and talent, he was associated with the lyre, the Oracle of Delphi, and the arts.",
+    "target_text": "apollo core, sun chariot, golden lyre, laurel crown, delphi temple, marble youth, radiant god aesthetic, glowing horizon"
+  },
+  {
+    "name": "Artemis",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Artemis is the Greek goddess of the hunt, wilderness, and the moon. She is often depicted with a bow and arrows, accompanied by deer, and represents chastity and independence.",
+    "target_text": "artemis core, bow and arrow aesthetic, forest goddess vibes, sacred deer, night hunt aesthetic, moonlit woods, flowing robes, marble statues, temple sanctuaries"
+  },
+  {
+    "name": "Hades",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Hades is the god of the underworld in Greek mythology. He rules over the dead and is associated with wealth, shadows, and the afterlife. He is often depicted with Cerberus, the three-headed dog.",
+    "target_text": "hades core, black marble throne, underworld aesthetic, cerberus, river styx, obsidian textures, gothic temples, dark laurel crown, mythic darkness"
+  },
+  {
+    "name": "Persephone",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Persephone is the Greek goddess of spring and queen of the underworld. Daughter of Demeter, she symbolizes the changing seasons and the cycle of life and death.",
+    "target_text": "persephone core, pomegranate imagery, floral crown, underworld duality, soft marble beauty, spring flowers, goddess of seasons, mythic femininity, life and death aesthetic"
+  },
+  {
+    "name": "Poseidon",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Poseidon is the Greek god of the sea, earthquakes, and horses. He is known for wielding a trident and ruling over oceans and storms from his underwater palace.",
+    "target_text": "poseidon core, trident power, ocean deity, stormy seas, hippocampus creatures, seafoam aesthetic, greek sea temples, coral crowns, aquatic rage"
+  },
+  {
+    "name": "Aphrodite",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Aphrodite is the Greek goddess of love, beauty, and desire. Born from sea foam, she represents romantic allure and is often shown with roses, doves, and flowing robes.",
+    "target_text": "aphrodite core, sea shell aesthetic, rose petals, classical beauty, soft pastels, ocean foam, grecian robes, goddess of love, marble charm"
+  },
+  {
+    "name": "Hermes",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Hermes is the Greek god of travel, trade, communication, and trickery. Known as the messenger of the gods, he wears winged sandals and carries the caduceus.",
+    "target_text": "hermes core, winged sandals, caduceus symbol, golden travel cloak, ancient roads aesthetic, trickster charm aesthetic, messenger aesthetic"
+  },
+  {
+    "name": "Ares",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Ares is the Greek god of war, representing brutal conflict and rage. He is often associated with bloodshed, chaos, and martial valor.",
+    "target_text": "ares core, blood-red armor, iron spear, flaming helmet, marble war statues, greek battlefield aesthetic, spartan rage, war god aesthetic, chaos and valor aesthetic"
+  },
+  {
+    "name": "Hera",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Hera is the queen of the Greek gods and goddess of marriage and family. She is associated with regality, peacocks, and divine authority.",
+    "target_text": "hera core, golden peacocks, regal elegance, marble throne, queen of gods, royal robes, sky palace imagery, goddess temples, divine matriarch"
+  },
+  {
+    "name": "Hephaestus",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Hephaestus is the Greek god of fire, blacksmithing, and craftsmanship. He forged divine weapons and artifacts in his volcanic workshop.",
+    "target_text": "Hephaestus core, forge flames, bronze tools, marble anvil, volcanic forge, mythic firelight, divine blacksmith, metal and stone aesthetic, greek craftsmanship"
+  },
+  {
+    "name": "Dionysus",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Dionysus is the Greek god of wine, ecstasy, theater, and ritual madness. He embodies chaos, creativity, and divine intoxication.",
+    "target_text": "Dionysus core, wine and ivy aesthetic, marble grape vines, ecstatic rituals, theatrical masks, Greek revelry, divine intoxication aesthetic, flowing wine aesthetic"
+  },
+  {
+    "name": "Pandora",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Pandora is the first woman in Greek mythology, created by the gods. Her curiosity led her to open a jar that released all evils into the world.",
+    "target_text": "pandora core, Pandora's box, golden jar, evil aesthetic, feminine mythic beauty, ancient fate, marble symbolism"
+  },
+  {
+    "name": "Medusa",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Medusa is a Gorgon whose hair was made of snakes. Her gaze turned people to stone. Once a beautiful maiden, she became a symbol of cursed power.",
+    "target_text": "snake hair, stone gaze, dark elegance, gorgon power, shattered statues, golden serpent jewelry, mythic horror, Medusa core"
+  },
+  {
+    "name": "Orpheus",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Orpheus is a legendary musician, poet, and prophet who charmed all beings with his lyre. He journeyed to the underworld for his beloved Eurydice.",
+    "target_text": "lyre music, tragic romance, underworld journey, Eurydice motif, poetic sorrow, river Lethe, Orpheus core"
+  },
+  {
+    "name": "Achilles",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Achilles is a Greek hero of the Trojan War and the central figure in Homer’s Iliad. Known for his divine strength and fatal heel.",
+    "target_text": "bronze armor aesthetic, marble heel, divine rage, Greek battlefield, Trojan War aesthetic, spear and shield, Achilles core, heroic fury"
+  },
+  {
+    "name": "Heracles",
+    "culture_region": "Greek",
+    "role": "Mythology",
+    "time_period": "Ancient",
+    "bio": "Heracles, known as Hercules in Roman mythology, is a demigod famed for completing the Twelve Labors. He symbolizes brute strength and heroic endurance.",
+    "target_text": "twelve labors, muscular marble statue, heroic trials, classical arena, lion skin, divine strength, Heracles core, mythic feats"
+  },
+  {
+    "name": "Minamoto no Yoshitsune",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Kamakura Period",
+    "bio": "Minamoto no Yoshitsune was a legendary Japanese general of the late Heian and early Kamakura periods. Renowned for his military genius and tragic end, he became a national folk hero.",
+    "target_text": "samurai aesthetic, katana aesthetics, bamboo forest aesthetic, Kamakura war banners, Japanese scroll art, japanese warrior aesthetic, cherry blossoms, kamakura period art, wandering ronin aesthetic"
+  },
+  {
+    "name": "Tomoe Gozen",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Heian Period",
+    "bio": "Tomoe Gozen was a legendary onna-bugeisha (female warrior) of the late Heian period, known for her bravery, beauty, and mastery of sword and horseback archery.",
+    "target_text": "heian period art, onna-bugeisha elegance, japanese horseback archery, Heian battlefield, cherry blossoms, japanese scroll art, armor aesthetic, japanese ink wash aesthetic"
+  },
+  {
+    "name": "Miyamoto Musashi",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Edo Period",
+    "bio": "Miyamoto Musashi was a legendary swordsman, philosopher, and ronin of the Edo period. He authored *The Book of Five Rings* and is revered as Japan’s greatest duelist.",
+    "target_text": "edo period art, wandering ronin, Zen solitude, bamboo dojo, Edo era philosophy, ink wash aesthetic, Japanese scroll art, calligraphy brush"
+  },
+  {
+    "name": "Oda Nobunaga",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Sengoku Period",
+    "bio": "Oda Nobunaga was a powerful daimyo and unifier of Japan during the Sengoku period. Known for his ruthless tactics and modernization of warfare.",
+    "target_text": "Sengoku war banners, sengoku period art, daimyo aesthetic, tatami battlefield, samurai armor, Japanese ink art, fire and steel, traditional japanese battlefield art"
+  },
+  {
+    "name": "Hattori Hanzō",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Sengoku Period",
+    "bio": "Hattori Hanzō was a legendary ninja and samurai who served Tokugawa Ieyasu. Known for his espionage skills, he became a symbol of stealth and shadow warfare in Japanese history.",
+    "target_text": "sengoku period art, japanese ninja aesthetics, japanese architecture art, black night armor, moonlit infiltration, Tokugawa Ieyasu, japanese ninja weapons aesthetic, samurai aesthetic, shadowy espionage, traditional ninja sandals, japanese ink wash aesthetic"
+  },
+  {
+    "name": "Sanada Yukimura",
+    "culture_region": "Japanese",
+    "role": "Warrior",
+    "time_period": "Sengoku Period",
+    "bio": "Sanada Yukimura was a revered samurai commander during Japan’s Sengoku era, famed for his valor at the Siege of Osaka and loyalty to the Toyotomi clan. He is celebrated as a paragon of samurai honor.",
+    "target_text": "sengoku period art, crimson armor, samurai armor aesthetic, japanese scroll art, burning castles, bamboo battlefield, Siege of Osaka, samurai sacrifice, Toyotomi clan"
+  },
+  {
+    "name": "Cleopatra",
+    "culture_region": "Egyptian",
+    "role": "Royalty",
+    "time_period": "Ptolemaic Dynasty",
+    "bio": "The last active ruler of the Ptolemaic Kingdom of Egypt, Cleopatra VII was known for her intelligence, political acumen, and alliances with Julius Caesar and Mark Antony.",
+    "target_text": "golden diadem, ptolemaic dynasty art, egyptian hieroglyphic art, kohl eyeliner, Nile river aesthetic, egyptian civilization aesthetic, lapis jewelry, papyrus scrolls, royal barge, Egyptian silk robes, pyramid sunset, ancient egyptian jewelery, egyptian queen aesthetic"
+  },
+  {
+    "name": "Nefertiti",
+    "culture_region": "Egyptian",
+    "role": "Royalty",
+    "time_period": "Amarna Period",
+    "bio": "Queen Nefertiti was the Great Royal Wife of Pharaoh Akhenaten and played a prominent religious and political role during the monotheistic Amarna Revolution.",
+    "target_text": "amarna period art, blue crown aesthetic, desert temples, sandstone walls, timeless beauty, golden necklace, egyptian hieroglyphic art, Egyptian columns"
+  },
+  {
+    "name": "Tutankhamun",
+    "culture_region": "Egyptian",
+    "role": "Royalty",
+    "time_period": "18th Dynasty",
+    "bio": "Tutankhamun, often called the 'Boy King,' ascended the throne at a young age and is most famous today for his richly adorned tomb, discovered largely intact in 1922.",
+    "target_text": "18th dynasty egypt aesthetic, golden mask, egyptian tomb, egyptian mummy, burial chamber glow, scarab amulets, royal sarcophagus, lapis and turquoise inlay, Egyptian death rituals, pharaonic aura, candlelit tomb, egyptian gold, egyptian hieroglyphic art, ancient egyptian civilization aesthetic"
+  },
+  {
+    "name": "Ramses II",
+    "culture_region": "Egyptian",
+    "role": "Royalty",
+    "time_period": "19th Dynasty",
+    "bio": "Also known as Ramses the Great, he was one of Egypt’s most powerful and celebrated pharaohs, famed for military victories, monumental construction, and a long reign of 66 years.",
+    "target_text": "18th dynasty egypt aesthetic, egyptian civilization aesthetic, stone colossi, warrior pharaoh, divine sun crown, falcon god motifs, royal decree scrolls, egyptian king aesthetic, hieroglyphic inscriptions, ancient egyptian civilization aesthetic"
+  },
+  {
+    "name": "Hatshepsut",
+    "culture_region": "Egyptian",
+    "role": "Royalty",
+    "time_period": "18th Dynasty",
+    "bio": "Hatshepsut was one of the few female pharaohs and known for a prosperous reign marked by trade expeditions, massive building projects, and peaceful governance.",
+    "target_text": "18th dynasty egypt aesthetic, egyptian queen garb, mortuary temple, sandstone ramps, gold-and-white aesthetic, egyptian trade expedition murals, egyptian queen, ancient egypt aesthetic, stone sphinx path, regal hieroglyphs"
+  },
+  {
+    "name": "Voltaire",
+    "culture_region": "French",
+    "role": "Philosopher",
+    "time_period": "Enlightenment",
+    "bio": "Voltaire was a leading Enlightenment thinker, known for his wit, criticism of the Catholic Church, and advocacy of civil liberties, including freedom of speech and religion.",
+    "target_text": "ink-stained manuscripts, salon conversations, enlightenment france aesthetic, powdered wig aesthetic, candlelit desk art, pastoral elegance, neoclassical busts, revolutionary wit, french literature aesthetic, Enlightenment salons, enlightenment era philosophy, antique quills, wisdom aesthetics, philosophical debates"
+  },
+  {
+    "name": "Jean-Jacques Rousseau",
+    "culture_region": "French",
+    "role": "Philosopher",
+    "time_period": "Enlightenment",
+    "bio": "Rousseau was a political philosopher and writer whose ideas on education, individual freedom, and the social contract heavily influenced the French Revolution and modern political theory.",
+    "target_text": "pastoral elegance, worn parchment scrolls, enlightenment nature, rustic study room, ink on linen, botanical sketches, french revolution aesthetics, candlelight reflections, handwritten treatises"
+  },
+  {
+    "name": "Montesquieu",
+    "culture_region": "French",
+    "role": "Philosopher",
+    "time_period": "Enlightenment",
+    "bio": "Montesquieu was a French political philosopher best known for his theory of the separation of powers, which deeply influenced modern constitutions and democratic governance.",
+    "target_text": "separation of powers scrolls, pastoral elegance, Parisian library halls, legal parchment, velvet cloaks, aged bookcases, court aesthetic, candlelit law chamber, enlightenment symbolism, neoclassical interior, democracy aesthetics, political philosophy"
+  },
+  {
+    "name": "Denis Diderot",
+    "culture_region": "French",
+    "role": "Philosopher",
+    "time_period": "Enlightenment",
+    "bio": "Diderot was a philosopher, writer, and chief editor of the Encyclopédie, a monumental Enlightenment work that aimed to catalog human knowledge and promote reason.",
+    "target_text": "encyclopedia pages, quill art, intellectual clutter, printing press charm, coffee-stained philosophy, enlightenment paper stacks, vintage typography, publishing aesthetic, revolutionary bookshelf, philosophy aesthetic, enlightenment era philosophy, enlightenment salons"
+  },
+  {
+    "name": "Martin Luther King Jr.",
+    "culture_region": "American",
+    "role": "Revolutionary",
+    "time_period": "20th Century",
+    "bio": "Martin Luther King Jr. was a Baptist minister and civil rights leader who advocated nonviolent resistance against racial segregation and injustice in the United States. He is best known for his 'I Have a Dream' speech and leadership in the Montgomery Bus Boycott, March on Washington, and Selma to Montgomery marches.",
+    "target_text": "civil rights marches, vintage microphones, black and white protest signs, peace doves, equality posters, vintage suits, historical speeches, justice symbolism, powerful oratory, 20th century american history, I have a dream aesthetic, black and white photography"
+  },
+  {
+    "name": "Malcolm X",
+    "culture_region": "American",
+    "role": "Revolutionary",
+    "time_period": "20th Century",
+    "bio": "Malcolm X was an African-American Muslim minister and human rights activist known for his powerful advocacy of black empowerment and self-determination. He was a prominent figure in the Nation of Islam before founding the Organization of Afro-American Unity and shifting toward a more inclusive approach to civil rights.",
+    "target_text": "black empowerment posters, Nation of Islam aesthetics, urban revolutionary mood, sharp suits, bold typography, protest portraits, civil rights marches, militant resistance"
+  },
+  {
+    "name": "Wu Daozi",
+    "culture_region": "Chinese",
+    "role": "Painter",
+    "time_period": "Tang Dynasty",
+    "bio": "Wu Daozi was a legendary Chinese painter of the Tang Dynasty, celebrated for his dynamic brushwork and expressive murals. Often called the 'Sage of Painting,' he specialized in Buddhist imagery and revolutionized Chinese figure painting.",
+    "target_text": "tang dynasty art, flying apsaras, Tang lifestyle art, chinese brushstrokes, mural elegance, Buddhist chinese frescoes, flowing robes, chinese ancient art, ink rhythm"
+  },
+  {
+    "name": "Yan Liben",
+    "culture_region": "Chinese",
+    "role": "Painter",
+    "time_period": "Tang Dynasty",
+    "bio": "Yan Liben was a court painter and official during the early Tang Dynasty. He is best known for imperial portraits and historical scrolls, and served as a high-ranking bureaucrat under Emperor Taizong.",
+    "target_text": "chinese court portraits, Tang dynasty robes, chinese imperial processions, tang dynasty art, ceremonial art, golden horses, chinese historical scrolls, chinese royalty aesthetic"
+  },
+  {
+    "name": "Zhang Xuan",
+    "culture_region": "Chinese",
+    "role": "Painter",
+    "time_period": "Tang Dynasty",
+    "bio": "Zhang Xuan was known for his paintings of court ladies and everyday aristocratic life. His works reflected Tang ideals of beauty and refinement and often focused on feminine elegance and seasonal festivities.",
+    "target_text": "court lady aesthetics, elegant Tang hairstyles, east asian art aesthetics, chinese aristocratic women, silk scrolls, tang dynasty art, feminine grace, chinese historical fashion art, poetic scenes"
+  },
+  {
+    "name": "Zhou Fang",
+    "culture_region": "Chinese",
+    "role": "Painter",
+    "time_period": "Tang Dynasty",
+    "bio": "Zhou Fang was a painter in the mid to late Tang Dynasty, renowned for blending religious themes with depictions of aristocratic women. His works helped set the standard for feminine beauty in Chinese art for centuries.",
+    "target_text": "chinese aristocratic women, floral robes, gentle expressionism, ink and silk beauty, elegant femininity, indoor scenes, Tang lifestyle art"
+  },
+  {
+    "name": "Ibn Sina",
+    "culture_region": "Persian",
+    "role": "Scientist",
+    "time_period": "Medieval Islamic Golden Age",
+    "bio": "Also known as Avicenna, Ibn Sina was a Persian polymath whose works in medicine, philosophy, and science became foundational in both Islamic and European traditions. His 'Canon of Medicine' remained a standard medical text for centuries.",
+    "target_text": "muslim intellectual gatherings aesthetics, medieval islamic golden age, islamic medicine aesthetic, scholar circles, aged scrolls, muslim scientist aesthetic, Persian ink realism, polymath aesthetics, Canon of Medicine, golden age of islamic science, persian calligraphy, medieval Persian architecture, Persian gardens"
+  },
+  {
+    "name": "Ibn al-Haytham",
+    "culture_region": "Persian",
+    "role": "Scientist",
+    "time_period": "Medieval Islamic Golden Age",
+    "bio": "Known as Alhazen in the West, Ibn al-Haytham was a pioneering physicist and mathematician whose groundbreaking work on optics laid the foundation for the modern scientific method. Though born in present-day Iraq, his contributions strongly influenced Persian and Islamic science.",
+    "target_text": "islamic optics aesthetic, light refraction diagrams aesthetic, ancient camera obscura, glowing manuscripts, golden age of islam, persian astronomy, islamic architecture, persian architecture, persian calligraphy"
+  },
+  {
+    "name": "Al-Biruni",
+    "culture_region": "Persian",
+    "role": "Scientist",
+    "time_period": "Medieval Islamic Golden Age",
+    "bio": "Al-Biruni was a brilliant Persian scientist and philosopher who made major contributions in astronomy, mathematics, physics, geography, and cultural studies. He was one of the first to propose that the Earth rotates on its axis.",
+    "target_text": "cosmology maps, golden age of islam, islamic scientist aesthetic, inked planetary diagrams, ancient globes, Persian science scrolls, golden horizon, stargazing traditions, timekeeping instruments "
+  },
+  {
+    "name": "Leonardo da Vinci",
+    "culture_region": "Italian",
+    "role": "Painter",
+    "time_period": "Renaissance",
+    "bio": "Leonardo da Vinci was a polymath of the Italian Renaissance known for his mastery in painting, science, engineering, and anatomy. His works such as the 'Mona Lisa' and 'The Last Supper' exemplify the ideals of Renaissance humanism and vitruvian principles.",
+    "target_text": "oil sketch studies, Vitruvian aesthetics, golden halos, marble realism, anatomy sketches, flying machines, Renaissance symmetry, Mona Lisa, The Last Supper, renaissance art, renaissance architecture, renaissance science"
+  },
+  {
+    "name": "Michelangelo",
+    "culture_region": "Italian",
+    "role": "Painter",
+    "time_period": "Renaissance",
+    "bio": "Michelangelo was a towering figure of the Italian Renaissance, renowned for his sculpture, painting, and architectural genius. He is best known for the Sistine Chapel ceiling, the statue of David, and his dynamic use of human anatomy and emotion in art.",
+    "target_text": "Sistine Chapel details, ceiling frescoes, stone textures, sculptural light, David statue, renaissance art, renaissance sculpture, renaissance painting"
+  },
+  {
+    "name": "Frida Kahlo",
+    "culture_region": "Mexican",
+    "role": "Painter",
+    "time_period": "20th Century, Modern Art",
+    "bio": "Frida Kahlo was a Mexican painter best known for her deeply personal self-portraits and exploration of identity, postcolonialism, gender, and pain. Her art blends surrealism with Mexican folk culture, creating a unique and symbolic visual language.",
+    "target_text": "floral headpieces, folk surrealism, embroidered corsets, mexican identity, Kahlo aesthetics"
+  },
+  {
+    "name": "Claude Monet",
+    "culture_region": "French",
+    "role": "Painter",
+    "time_period": "19th–20th Century, Impressionist Era",
+    "bio": "Claude Monet was a founding figure of the French Impressionist movement. He is celebrated for his use of light, color, and fleeting impressions in natural settings, especially in his famous series of water lilies and the gardens of Giverny.",
+    "target_text": "water lily gardens, foggy mornings, plein air palettes, pastel reflections, French Impressionist aesthetic, dreamy Impressionism, Giverny calm"
+  },
+  {
+    "name": "Pablo Picasso",
+    "culture_region": "Spanish",
+    "role": "Painter",
+    "time_period": "20th Century, Cubist Era",
+    "bio": "Pablo Picasso was a revolutionary Spanish artist whose work spanned painting, sculpture, and ceramics. He co-founded Cubism and pushed the boundaries of visual form through periods like the Blue Period, Rose Period, and his influential work on 'Guernica.'",
+    "target_text": "cubist abstractions, shattered perspectives, blue period sorrow, studio chaos, geometric emotion, fragmented forms, Picasso aesthetics"
+  },
+  {
+    "name": "Vladimir Lenin",
+    "culture_region": "Russian",
+    "role": "Revolutionary",
+    "time_period": "20th Century",
+    "bio": "Vladimir Lenin was the leader of the Bolshevik Party and a key figure in the Russian Revolution of 1917. He became the head of the Soviet state and laid the ideological and political foundation for communism in the USSR.",
+    "target_text": "hammer silhouettes, snowy barricades, Bolshevik aesthetics, russian revolution aesthetics, communism, industrial grays, soviet union aesthetic, russia WWI aesthetics"
+  },
+  {
+    "name": "Nelson Mandela",
+    "culture_region": "South African",
+    "role": "Revolutionary",
+    "time_period": "20th Century",
+    "bio": "Nelson Mandela was a South African anti-apartheid revolutionary who became the first Black president of South Africa. He spent 27 years in prison for his activism and became a global icon of peace, reconciliation, and justice.",
+    "target_text": "aesthetic prison bars, Robben Island walls, courtroom resistance aesthetics, south africa apartheid struggle, rainbow nation"
+  },
+  {
+    "name": "Bhagat Singh",
+    "culture_region": "Indian",
+    "role": "Revolutionary",
+    "time_period": "20th Century",
+    "bio": "Bhagat Singh was an Indian revolutionary socialist who became a symbol of youth rebellion against British colonial rule. Known for his radical activism and martyrdom, he inspired generations of freedom fighters in India.",
+    "target_text": "British jail cell shadows, indian architecture, paper bombs, turbaned defiance, ink-and-blood manifestos, british colonial resistance, british india aesthetics, british india"
+  },
+  {
+    "name": "Mahatma Gandhi",
+    "culture_region": "Indian",
+    "role": "Freedom Leader",
+    "time_period": "20th Century",
+    "bio": "Mahatma Gandhi was a leader of India’s nonviolent independence movement against British rule. He pioneered civil disobedience and satyagraha, emphasizing self-reliance, khadi cloth, and peaceful protest as tools of resistance.",
+    "target_text": "handspun khadi cloth, round spectacles, spinning wheels, british india aesthetics, Hinduism, nonviolent resistance"
+  },
+  {
+    "name": "King George V",
+    "culture_region": "British",
+    "role": "Royalty",
+    "time_period": "World War I",
+    "bio": "King George V was the King of the United Kingdom during World War I and the first monarch of the House of Windsor. His reign saw the transformation of the British Empire during global conflict and major political changes.",
+    "target_text": "military medals, world war I, Edwardian uniforms, world war I british royals, palace war rooms, crown insignia, wartime diplomacy, British Empire symbols, world war I uniforms,british monarchy aesthetics"
+  },
+  {
+    "name": "King Edward VIII",
+    "culture_region": "British",
+    "role": "Royalty",
+    "time_period": "World War II",
+    "bio": "King Edward VIII was the British monarch who famously abdicated the throne in 1936 to marry Wallis Simpson, an American divorcée. His short reign and abdication caused a constitutional crisis and led to his lifelong exile.",
+    "target_text": "King Edward VIII abdication, luxury exile, tailored suits, controversial romance, regal melancholy, postwar aristocracy, Windsor style"
+  },
+  {
+    "name": "Queen Elizabeth II",
+    "culture_region": "British",
+    "role": "Royalty",
+    "time_period": "World War II, Post-War Era",
+    "bio": "Queen Elizabeth II ascended the throne in 1952 and became the longest-reigning monarch in British history. As a princess, she served in the Auxiliary Territorial Service during World War II. Her reign symbolized continuity and tradition in a changing world.",
+    "target_text": "wartime service uniform, british royal coronation, birmingham palace aesthetic, crown jewels, british crown, 1950s england aesthetic, corgi companionship, christianity, windsor castle aesthetics, british monarchy aesthetic"
+  },
+  {
+    "name": "Kaiser Wilhelm II",
+    "culture_region": "German",
+    "role": "Royalty",
+    "time_period": "World War I",
+    "bio": "Kaiser Wilhelm II was the last German Emperor and King of Prussia, ruling from 1888 until his abdication in 1918. A key figure during World War I, his militarism and leadership were pivotal in the war’s outbreak.",
+    "target_text": "Prussian helmets, Prussian empire, world war I Germany aesthetics, military regalia, prussian royals, iron cross aesthetics, fallen empire"
+  },
+  {
+    "name": "Tsar Nicholas II",
+    "culture_region": "Russian",
+    "role": "Royalty",
+    "time_period": "World War I",
+    "bio": "Tsar Nicholas II was the last Emperor of Russia. His reign ended with the Russian Revolution, which led to the collapse of the Romanov dynasty. He and his family were executed by the Bolsheviks in 1918.",
+    "target_text": "Romanov opulence, romanov aesthetic, world war I russian, russian revolution aesthetics, orthodox icons, tragic royalty, tsar asthetics, snowy palaces, revolution shadows"
+  },
+  {
+    "name": "Queen Victoria",
+    "culture_region": "British",
+    "role": "Royalty",
+    "time_period": "19th Century",
+    "bio": "Queen Victoria ruled the United Kingdom from 1837 to 1901. Her reign, the Victorian Era, was marked by industrial, cultural, and imperial expansion. She became a global symbol of British values and the head of a vast empire.",
+    "target_text": "black mourning dress, british royalty art, british empire aesthetics, empire map motifs, Victorian parlors, victorian england, steampunk elegance, stiff portraits, aristocratic elegance, Victorian fashion"
+  },
+  {
+    "name": "Marie Antoinette",
+    "culture_region": "French",
+    "role": "Royalty",
+    "time_period": "18th Century",
+    "bio": "Marie Antoinette was the Queen of France and the wife of King Louis XVI. Known for her lavish lifestyle and perceived indifference to the struggles of the French people, she became a symbol of royal excess during the French Revolution and was executed by guillotine in 1793.",
+    "target_text": "rococo elegance, extravagant weatlh visuals, Pre-revolution France, pastel gowns, pearl jewelry, palace gardens, decadent cakes, powdered hairstyles, versailles aesthetic, french revolution aesthetic"
+  },
+  {
+    "name": "Napoleon Bonaparte",
+    "culture_region": "French",
+    "role": "Royalty",
+    "time_period": "18th Century",
+    "bio": "Napoleon Bonaparte was a French military leader who rose to power during the French Revolution and declared himself Emperor of the French. He led numerous military campaigns across Europe, dramatically reshaping European politics before his defeat and exile.",
+    "target_text": "french revolution, imperial laurel wreaths, battlefield glory, french kingdom aesthetic, napoleonic era, conquest maps, neoclassical power, french battlefield art, napolean army military uniforms, french empire"
+  },
+  {
+    "name": "Jon Snow",
+    "culture_region": "Fantasy (Westeros)",
+    "role": "Knight",
+    "time_period": "Fantasy Medieval",
+    "bio": "Jon Snow is a central character in George R.R. Martin's *A Song of Ice and Fire* series and HBO's *Game of Thrones*. He is raised as the illegitimate son of Eddard Stark and later revealed to have royal Targaryen lineage. Known for his sense of honor and leadership, he plays a key role in the battle between the living and the dead.",
+    "target_text": "snow-covered armor, direwolf imagery, cold landscapes, black cloaks, brooding castle walls, medieval swords"
+  },
+  {
+    "name": "Loki",
+    "culture_region": "Norse Mythology",
+    "role": "Trickster God",
+    "time_period": "Mythological Era",
+    "bio": "Loki is a shape-shifting trickster god in Norse mythology, known for his cunning, chaos, and complex morality. He is associated with mischief and deception but also plays roles in key mythological events such as the birth of monsters and the coming of Ragnarok.",
+    "target_text": "horned helmet, illusion magic, green-gold motifs, mischief aesthetic, swirling portals, Nordic patterns, loki core"
+  },
+  {
+    "name": "Batman",
+    "culture_region": "American Fiction",
+    "role": "Vigilante",
+    "time_period": "Modern",
+    "bio": "Batman, also known as Bruce Wayne, is a fictional superhero created by Bob Kane and Bill Finger for DC Comics. A wealthy industrialist who witnessed the murder of his parents, he dons a bat-themed costume to fight crime in Gotham City using intellect, gadgets, and martial arts.",
+    "target_text": "gothic skyscrapers, bat signal, dark knight silhouette, noir crime scenes, black cape aesthetic, urban shadows, noir aesthetics, Gotham City"
+  },
+  {
+    "name": "Sherlock Holmes",
+    "culture_region": "British Fiction",
+    "role": "Detective",
+    "time_period": "Victorian Era",
+    "bio": "Sherlock Holmes is a fictional detective created by Sir Arthur Conan Doyle. Known for his exceptional powers of observation and logical reasoning, he solved complex cases across Victorian London alongside his companion Dr. Watson.",
+    "target_text": "London fog, magnifying glass aesthetic, vintage pipe, detective notebooks, Victorian streets, mystery wallpaper, crime scene diagrams, victorian detective aesthetic, victorian crime scene"
+  },
+  {
+    "name": "Elizabeth Bennet",
+    "culture_region": "British Fiction",
+    "role": "Heroine",
+    "time_period": "Regency Era",
+    "bio": "Elizabeth Bennet is the intelligent and spirited protagonist of Jane Austen's novel *Pride and Prejudice*. She navigates societal pressures, family expectations, and romantic entanglements in early 19th-century England, ultimately challenging norms of class and gender.",
+    "target_text": "pastel gowns, jane austen aesthetics, countryside elegance, handwritten letters, vintage romance, garden walks, classic novels aesthetic, candlelit reading, pride and prejudice aesthetics"
+  },
+  {
+    "name": "Harry Potter",
+    "culture_region": "British Fiction",
+    "role": "Wizard",
+    "time_period": "Modern Fantasy (1990s)",
+    "bio": "Harry Potter is the protagonist of J.K. Rowling's famous fantasy series. An orphaned boy who discovers he is a wizard, he attends Hogwarts School of Witchcraft and Wizardry and becomes central in the fight against the dark wizard Voldemort.",
+    "target_text": "wizard robes, floating candles, spell books, Hogwarts castle, magical maps, owl imagery, enchanted aesthetic, potion bottles, wizarding world aesthetics"
+  },
+  {
+    "name": "Frodo Baggins",
+    "culture_region": "Middle-earth Fiction",
+    "role": "Hero",
+    "time_period": "Fantasy Medieval",
+    "bio": "Frodo Baggins is a hobbit from J.R.R. Tolkien’s *The Lord of the Rings* trilogy. Tasked with destroying the One Ring, he embarks on an epic journey across Middle-earth, facing immense trials while symbolizing endurance and moral courage.",
+    "target_text": "Shire greenery, elvish scripts, ancient maps, hobbit holes, rustic satchels, middle earth journey aesthetics, fantasy landscapes, hobbit aesthetic, Middle-earth aesthetics"
+  },
+  {
+    "name": "Black Panther",
+    "culture_region": "Afrofuturism",
+    "role": "Superhero King",
+    "time_period": "Futuristic (Marvel Universe)",
+    "bio": "Black Panther, also known as T'Challa, is a Marvel Comics superhero and the king of Wakanda, a fictional African nation with advanced technology and culture. He embodies Afrofuturism and balances royal duty with heroic responsibility, fighting to protect both his people and the world.",
+    "target_text": "vibranium glow, Afrofuturism, panther statues, Wakandan skyline, black panther aesthetic, black-gold strength"
+  },
+  {
+    "name": "Captain America",
+    "culture_region": "American Fiction",
+    "role": "Super Soldier",
+    "time_period": "World War II and Modern",
+    "bio": "Captain America, or Steve Rogers, is a Marvel Comics superhero originally created as a patriotic supersoldier during World War II. After being frozen in ice, he awakens in the modern era and continues to serve as a moral leader and defender of justice in the Avengers.",
+    "target_text": "vintage war posters, star shield motif, patriotic tones, 1940s fashion, military aesthetics, red-white-blue color scheme, captain america shield"
+  },
+  {
+    "name": "Spider-Man",
+    "culture_region": "American Fiction",
+    "role": "Teen Hero",
+    "time_period": "Modern",
+    "bio": "Spider-Man, aka Peter Parker, is a Marvel Comics superhero known for his agility, intellect, and wit. Gaining spider-like abilities from a radioactive bite, he juggles his teenage life in New York City with crime-fighting, often exploring themes of responsibility and personal growth.",
+    "target_text": "city rooftops, web patterns, red-blue contrast, photography gear, youthful heroism, NYC aesthetics, spider webs, spiderman aesthetics, spiderman comics"
+  },
+  {
+    "name": "Elon Musk",
+    "culture_region": "Global",
+    "role": "Tech Entrepreneur",
+    "time_period": "21st Century",
+    "bio": "Elon Musk is a visionary entrepreneur and engineer known for founding and leading companies like SpaceX, Tesla, Neuralink, and The Boring Company. He is a central figure in space exploration, electric vehicles, and futuristic innovations, often aiming to reshape the future of humanity.",
+    "target_text": "rocket launches, SpaceX, futuristic cities, Tesla minimalism, Mars colonization, cyberpunk innovation, neural networks aesthetic"
+  },
+  {
+    "name": "Jeff Bezos",
+    "culture_region": "Global",
+    "role": "Tech Entrepreneur",
+    "time_period": "21st Century",
+    "bio": "Jeff Bezos is the founder of Amazon and a major figure in the e-commerce and cloud computing revolutions. Under his leadership, Amazon became one of the world’s most powerful tech companies. He also founded Blue Origin, a space exploration company focused on commercial space travel.",
+    "target_text": "ecommerce empire, Amazon innovation, cloud servers, warehouse drones, Blue Origin rockets, modern capitalism aesthetic"
+  },
+  {
+    "name": "Mark Zuckerberg",
+    "culture_region": "Global",
+    "role": "Tech Entrepreneur",
+    "time_period": "21st Century",
+    "bio": "Mark Zuckerberg is the co-founder and CEO of Meta (formerly Facebook), a company that transformed global social interaction. He has expanded into virtual reality and the metaverse, aiming to shape the future of human connection through digital environments.",
+    "target_text": "social networks, facebook aesthetic, virtual reality headsets, metaverse design, hoodie simplicity, blue tech visuals, digital connection themes, social media aesthetics"
+  },
+  {
+    "name": "Steve Jobs",
+    "culture_region": "Global",
+    "role": "Tech Entrepreneur",
+    "time_period": "Late 20th – Early 21st Century",
+    "bio": "Steve Jobs was the co-founder and iconic leader of Apple Inc. He revolutionized consumer electronics with the Macintosh, iPod, iPhone, and iPad, pioneering sleek product design and intuitive user interfaces. Jobs is remembered as a visionary who merged technology with artistry.",
+    "target_text": "black turtleneck symbolism, Apple minimalism, glass design language, innovation mindset, tech simplicity, keynote aesthetics"
+  },
+  {
+    "name": "Bill Gates",
+    "culture_region": "Global",
+    "role": "Tech Entrepreneur",
+    "time_period": "Late 20th – 21st Century",
+    "bio": "Bill Gates is the co-founder of Microsoft and a pivotal figure in the personal computing revolution. After transitioning from tech, he became a leading philanthropist through the Bill & Melinda Gates Foundation, focusing on global health, education, and sustainability.",
+    "target_text": "early Windows UI, Gates Foundation visuals, global innovation maps, philanthro-tech, vintage coding, legacy software symbolism"
+  },
+  {
+    "name": "Nikola Tesla",
+    "culture_region": "Serbian-American",
+    "role": "Engineer",
+    "time_period": "Industrial Era",
+    "bio": "Nikola Tesla was a brilliant inventor, physicist, and electrical engineer known for his revolutionary contributions to alternating current (AC) electricity, wireless transmission, and electromagnetism. His eccentric persona and visionary experiments have made him a symbol of scientific genius and innovation.",
+    "target_text": "lightning coils, retro lab experiments, old-world electricity, eccentric genius mood, Victorian tech fusion, plasma energy, electrical engineering aesthetics"
+  },
+  {
+    "name": "Friedrich Nietzsche",
+    "culture_region": "German",
+    "role": "Philosopher",
+    "time_period": "Late 19th Century",
+    "bio": "Friedrich Nietzsche was a German philosopher known for his provocative critiques of morality, religion, and culture. He developed influential ideas like the Übermensch, eternal recurrence, and the famous proclamation 'God is dead', shaping existentialist and postmodern thought.",
+    "target_text": "existential shadows, overgrown ruins, lone thinkers, typewritten aphorisms, Existential nihilism, mountain solitude, vintage philosophy books, God is dead quote"
+  },
+  {
+    "name": "Karl Marx",
+    "culture_region": "German",
+    "role": "Philosopher",
+    "time_period": "Industrial Era",
+    "bio": "Karl Marx was a German philosopher, economist, and revolutionary socialist. He co-authored 'The Communist Manifesto' and developed the theory of historical materialism, laying the foundation for Marxism and influencing global politics and labor movements.",
+    "target_text": "19th century germany aesthetic, industrial smokestacks, tattered manifestos, working-class symbolism, marxism aesthetic, ink-stained revolutions, dim factories, red banners, utopian blueprints, Communist Manifesto"
+  },
+  {
+    "name": "John Locke",
+    "culture_region": "British",
+    "role": "Philosopher",
+    "time_period": "Enlightenment Era",
+    "bio": "John Locke was a British philosopher widely regarded as the father of liberalism. His writings on natural rights, the social contract, and empiricism profoundly shaped Enlightenment thought and the development of modern democratic theory.",
+    "target_text": "17th century quill writing, 17th century britain aesthetic, Enlightenment parlors, aged parchment, vintage inkwell collections, candlelit essays"
+  },
+  {
+    "name": "Al-Ghazali",
+    "culture_region": "Persian",
+    "role": "Philosopher",
+    "time_period": "Islamic Golden Age",
+    "bio": "Al-Ghazali was a Persian philosopher, theologian, jurist, and mystic whose works bridged Islamic theology and Sufi spirituality. His writings, especially 'The Incoherence of the Philosophers', profoundly influenced Islamic thought and integrated reason with faith.",
+    "target_text": "Islamic Golden Age, Sufi mysticism, divine geometry, modest lamps, ash-colored wisdom, arabic calligraphy, islamic philosophy"
+  },
+  {
+    "name": "Ibn Khaldun",
+    "culture_region": "Maghrebi",
+    "role": "Philosopher-Historian",
+    "time_period": "Medieval Islamic Era",
+    "bio": "Ibn Khaldun was a North African historian, philosopher, and sociologist, best known for his pioneering work 'Muqaddimah'. He introduced early concepts of historiography, economics, and the cyclical nature of civilizations.",
+    "target_text": "arabic calligraphy, islamic golden age, Muqaddimah manuscript, cyclical history maps, history maps aesthetic, Maghreb medinas"
+  },
+  {
+    "name": "Vincent van Gogh",
+    "culture_region": "Dutch",
+    "role": "Painter",
+    "time_period": "Post-Impressionist Era",
+    "bio": "Vincent van Gogh was a Dutch post-impressionist painter whose emotionally charged and vibrant works, like 'Starry Night' and 'Sunflowers', deeply influenced modern art. His expressive brushwork and turbulent life became symbols of the tortured artistic soul.",
+    "target_text": "swirling night skies, sunflower madness, post-impressionist brushwork, rustic solitude, bandaged self-portraits, emotional texture, van gogh aesthetics, starry night, vibrant yellows"
+  },
+  {
     "name": "Isaac Newton",
     "culture_region": "British",
     "role": "Scientist",
     "time_period": "17th Century (Scientific Revolution)",
     "bio": "Isaac Newton was an English mathematician, physicist, and astronomer who formulated the laws of motion and universal gravitation. His work 'Principia Mathematica' laid the foundation for classical mechanics and revolutionized scientific understanding.",
     "target_text": "apple under tree, classical science aesthetic, celestial mechanics, gravity aesthetics, prism light rays, parchment formulas, alchemical sketches, candlelit studies, Newtonian physics, vintage telescopes"
-},
-{
+  },
+  {
     "name": "Galileo Galilei",
     "culture_region": "Italian",
     "role": "Scientist",
     "time_period": "16th-17th Century (Renaissance)",
     "bio": "Galileo Galilei was an Italian astronomer, physicist, and engineer known for his pioneering use of the telescope. He supported heliocentrism and faced the Inquisition for challenging established geocentric beliefs.",
     "target_text": "antique telescope, classical science aesthetic, star charts, Renaissance observatory, heliocentric symbols, inquisition tension, parchment notes, planetary sketches, scientific rebellion aesthetic"
-},
-{
+  },
+  {
     "name": "Marie Curie",
     "culture_region": "Polish-French",
     "role": "Physicist-Chemist",
     "time_period": "19th-20th Century",
     "bio": "Marie Curie was a pioneering physicist and chemist who conducted groundbreaking research on radioactivity. She was the first woman to win a Nobel Prize and remains the only person to receive Nobel Prizes in two different sciences.",
     "target_text": "glowing test tubes, early lab glassware, radioactive minerals, chalkboard equations, Nobel prize glow, scientific perseverance, vintage chemistry aesthetic"
-}
+  }
 ]
