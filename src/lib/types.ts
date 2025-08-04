@@ -13,3 +13,17 @@ export interface ScrapingResult {
   totalFound: number;
   keyword: string;
 }
+
+export interface PersonalityData {
+  personality_name: string;
+  culture_region: string;
+  role: string;
+  time_period: string;
+  bio: string;
+}
+export interface KeywordResponse {
+  keywords: string;
+  personality: string;
+  prompt_used: string;
+  success: boolean;
+}
