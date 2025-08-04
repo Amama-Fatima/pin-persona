@@ -26,7 +26,7 @@ const PersonalityInfoCard: React.FC<PersonalityInfoCardProps> = ({
         return {
           name: match[1],
           role: match[2],
-          bio: match[3] + "...",
+          bio: match[3],
         };
       }
     } catch (error) {

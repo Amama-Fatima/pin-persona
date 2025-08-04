@@ -62,7 +62,7 @@ export async function getKeywordsForPersonality(
 
     const keywordData: KeywordResponse = await keywordResp.json();
     console.log("Personality Data: in api", personalityData);
-    console.log("Keywords Data: in api", keywordData);
+    console.log("Keywords Data: in api", keywordData.prompt_used);
     return keywordData;
   } catch (error) {
     console.error("Error generating keywords:", error);

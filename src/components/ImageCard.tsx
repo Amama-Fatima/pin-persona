@@ -3,7 +3,7 @@ import React from "react";
 import { PinterestImage } from "../lib/types";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { Download, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface ImageCardProps {
   image: PinterestImage;
@@ -31,16 +31,10 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onDownload }) => {
           <h3 className="font-medium text-sm line-clamp-2 leading-tight">
             {image.title}
           </h3>
-
-          {image.description && (
-            <p className="text-xs text-muted-foreground line-clamp-2">
-              {image.description}
-            </p>
-          )}
         </div>
 
         <div className="flex gap-2">
-          <Button
+          {/* <Button
             size="sm"
             onClick={() => onDownload(image)}
             className="flex-1 flex items-center gap-1"
@@ -48,7 +42,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onDownload }) => {
           >
             <Download className="h-3 w-3" />
             Download
-          </Button>
+          </Button> */}
 
           <Button
             size="sm"
