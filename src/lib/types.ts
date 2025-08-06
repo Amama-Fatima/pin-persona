@@ -6,6 +6,7 @@ export interface PinterestImage {
   width?: number;
   height?: number;
   sourceUrl?: string;
+  fallbackUrls?: string[];
 }
 
 export interface ScrapingResult {
