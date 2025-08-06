@@ -25,6 +25,6 @@ LoRA fine tuning on a 101 example dataset. Dataset is of the shape:
 
 The model is prompted with input of the format:
 
-_Generate Pinterest keywords for {name}. Culture: {culture} | Period: {time_period} | Role: {role} | Bio: {bio} Keywords should be visual, searchable on Pinterest, and capture their aesthetic essence. The Culture, Role, Period and bio give important information about the personality. Take them into account when generating keywords._
+`Generate Pinterest keywords for {name}. Culture: {culture} | Period: {time_period} | Role: {role} | Bio: {bio} Keywords should be visual, searchable on Pinterest, and capture their aesthetic essence. The Culture, Role, Period and bio give important information about the personality. Take them into account when generating keywords.`
 
 and it outputs a list of pinterest specific keywords related to that personality.
