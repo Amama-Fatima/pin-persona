@@ -6,7 +6,7 @@ _If Seneca had a Pinterest board, what would be on it?_
 
 ## Live Demo
 
-- 🔗 Website: [https://pin-persona.vercel.app](https://pin-persona-amycxgohh-amamafatima58gmailcoms-projects.vercel.app/)
+- 🔗 Website: [https://pin-persona.vercel.app](https://pin-persona.vercel.app/)
 - 🚀 Model on Hugging Face: [pinterest-personality-keywords-v3](https://huggingface.co/pinterest-personality-keywords-v3)
 - 🛠️ API Space: [pinterest-persona-api](https://huggingface.co/spaces/pinterest-persona-api)
 
