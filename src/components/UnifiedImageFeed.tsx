@@ -3,7 +3,7 @@ import { PinterestImage } from "../lib/types";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Loader2, Grid3X3, Images } from "lucide-react";
-import ImageCard from "./ImageCard";
+import MasonryImageCard from "./MasonryImageCard";
 import { KeywordResults } from "../hooks/usePersonalityScrapper";
 
 interface UnifiedImageFeedProps {
@@ -17,8 +17,6 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
   onDownload,
   isLoading = false,
 }) => {
-  // Combine all images from all completed keywords into a single array
-  // Each image gets tagged with its keyword for the tooltip
   const allImages = keywordResults
     .filter((result) => result.completed && result.images.length > 0)
     .flatMap((result) =>
@@ -28,12 +26,10 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
       }))
     );
 
-  // Get loading keywords
   const loadingKeywords = keywordResults
     .filter((result) => result.loading)
     .map((result) => result.keyword);
 
-  // Get stats
   const totalImages = allImages.length;
   const completedKeywords = keywordResults.filter(
     (result) => result.completed
@@ -67,7 +63,6 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
       </CardHeader>
 
       <CardContent>
-        {/* Loading indicators for active keywords */}
         {loadingKeywords.length > 0 && (
           <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-2 mb-2">
@@ -90,19 +85,18 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
           </div>
         )}
 
-        {/* Main image grid */}
         {allImages.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div className="masonry-container">
             {allImages.map((image) => (
-              <ImageCard
+              <div
                 key={`${image.keyword}-${image.id}`}
-                image={image}
-                onDownload={onDownload}
-              />
+                className="break-inside-avoid mb-4"
+              >
+                <MasonryImageCard image={image} onDownload={onDownload} />
+              </div>
             ))}
           </div>
         ) : (
-          // Empty state when no images are loaded yet
           <div className="flex flex-col items-center justify-center py-16 text-center">
             <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4">
               <Images className="h-8 w-8 text-gray-400" />
@@ -118,6 +112,29 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
           </div>
         )}
       </CardContent>
+
+      <style jsx>{`
+        .masonry-container {
+          column-count: 3;
+          column-gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+          .masonry-container {
+            column-count: 2;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .masonry-container {
+            column-count: 1;
+          }
+        }
+
+        .break-inside-avoid {
+          break-inside: avoid;
+        }
+      `}</style>
     </Card>
   );
 };

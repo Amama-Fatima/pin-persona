@@ -1,20 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { PinterestImage } from "../lib/types";
 import { Button } from "./ui/button";
 import { ExternalLink, Download, Heart, Tag } from "lucide-react";
 
 interface EnhancedPinterestImage extends PinterestImage {
-  keyword?: string; // Added keyword for tooltip
+  keyword?: string;
 }
 
-interface ImageCardProps {
+interface MasonryImageCardProps {
   image: EnhancedPinterestImage;
   onDownload: (image: PinterestImage) => void;
   onImageError?: (imageId: string, error: string) => void;
 }
 
-const ImageCard: React.FC<ImageCardProps> = ({
+const MasonryImageCard: React.FC<MasonryImageCardProps> = ({
   image,
   onDownload,
   onImageError,
@@ -25,16 +25,28 @@ const ImageCard: React.FC<ImageCardProps> = ({
   const [imageError, setImageError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [gridRowEnd, setGridRowEnd] = useState<number | undefined>(undefined);
 
-  // array of all possible URLs (primary + fallbacks)
+  const imgRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const allUrls = [image.url, ...(image.fallbackUrls || [])].filter(Boolean);
+
+  const calculateGridRowEnd = () => {
+    if (imgRef.current && containerRef.current) {
+      const imageHeight = imgRef.current.offsetHeight;
+      const gap = 16; // 1rem gap
+      const rowHeight = 10; // grid-auto-rows: 10px
+      const rowSpan = Math.ceil((imageHeight + gap) / rowHeight);
+      setGridRowEnd(rowSpan);
+    }
+  };
 
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
     console.log(`Image failed to load: ${allUrls[currentUrlIndex]}`);
 
-    // Try next fallback URL
     if (currentUrlIndex < allUrls.length - 1) {
       console.log(
         `Trying fallback URL ${currentUrlIndex + 1}/${allUrls.length}`
@@ -42,7 +54,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
       setCurrentUrlIndex((prev) => prev + 1);
       setIsLoading(true);
     } else {
-      // All URLs failed
       const errorMessage = `All ${
         allUrls.length
       } URLs failed to load for image: ${image.title || image.id}`;
@@ -63,20 +74,33 @@ const ImageCard: React.FC<ImageCardProps> = ({
         }`
       );
     }
+    // Calculate grid position after image loads
+    setTimeout(calculateGridRowEnd, 50);
   };
 
-  // Reset when image changes
   useEffect(() => {
     setCurrentUrlIndex(0);
     setImageError(null);
     setIsLoading(true);
+    setGridRowEnd(undefined);
   }, [image.id]);
 
-  // Handle tooltip visibility
+  // Recalculate on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (!isLoading && !imageError) {
+        calculateGridRowEnd();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isLoading, imageError]);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
     if (image.keyword) {
-      setTimeout(() => setShowTooltip(true), 500); // Show tooltip after 500ms
+      setTimeout(() => setShowTooltip(true), 500);
     }
   };
 
@@ -89,9 +113,11 @@ const ImageCard: React.FC<ImageCardProps> = ({
   if (imageError) {
     return (
       <div
+        ref={containerRef}
         className="group relative cursor-pointer"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        style={{ gridRowEnd: `span 20` }}
       >
         <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-out">
           <div className="w-full h-48 flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 text-gray-500">
@@ -104,13 +130,11 @@ const ImageCard: React.FC<ImageCardProps> = ({
             </div>
           </div>
 
-          {/* Overlay with actions */}
           <div
             className={`absolute inset-0 bg-black/20 transition-opacity duration-200 ${
               isHovered ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* Top right actions */}
             <div className="absolute top-3 right-3 flex gap-2">
               <Button
                 size="sm"
@@ -129,7 +153,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
               </Button>
             </div>
 
-            {/* Keyword tooltip */}
             {showTooltip && image.keyword && (
               <div className="absolute top-3 left-3 bg-black/80 text-white text-xs px-3 py-2 rounded-full backdrop-blur-sm shadow-lg border border-white/20">
                 <div className="flex items-center gap-1">
@@ -146,13 +169,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
 
   return (
     <div
+      ref={containerRef}
       className="group relative cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{ gridRowEnd: gridRowEnd ? `span ${gridRowEnd}` : undefined }}
     >
-      {/* Main Image Container */}
       <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-out">
-        {/* Loading overlay */}
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
             <div className="flex flex-col items-center">
@@ -163,6 +186,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
         )}
 
         <img
+          ref={imgRef}
           src={allUrls[currentUrlIndex]}
           alt={image.title || "Pinterest image"}
           className={`w-full h-auto object-cover transition-all duration-300 ease-out group-hover:scale-[1.02] ${
@@ -176,20 +200,18 @@ const ImageCard: React.FC<ImageCardProps> = ({
           }}
         />
 
-        {/* Debug info (only in development) */}
         {process.env.NODE_ENV === "development" && !isLoading && (
           <div className="absolute top-2 left-2 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">
             URL {currentUrlIndex + 1}/{allUrls.length}
+            {gridRowEnd && ` | Span: ${gridRowEnd}`}
           </div>
         )}
 
-        {/* Overlay with actions - appears on hover */}
         <div
           className={`absolute inset-0 bg-black/20 transition-opacity duration-200 ${
             isHovered && !isLoading ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Keyword tooltip - appears first, then fades when other controls appear */}
           {showTooltip && image.keyword && (
             <div className="absolute top-3 left-3 bg-black/80 text-white text-xs px-3 py-2 rounded-full backdrop-blur-sm shadow-lg border border-white/20 transition-opacity duration-200">
               <div className="flex items-center gap-1">
@@ -199,14 +221,12 @@ const ImageCard: React.FC<ImageCardProps> = ({
             </div>
           )}
 
-          {/* Top right actions */}
           <div className="absolute top-3 right-3 flex gap-2">
             <Button
               size="sm"
               className="h-8 w-8 p-0 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg"
               onClick={(e) => {
                 e.stopPropagation();
-                // Create updated image object with current working URL
                 const updatedImage = {
                   ...image,
                   url: allUrls[currentUrlIndex],
@@ -234,7 +254,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
             </Button>
           </div>
 
-          {/* Bottom left heart icon */}
           <div className="absolute bottom-3 left-3">
             <Button
               size="sm"
@@ -253,7 +272,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
             </Button>
           </div>
 
-          {/* Bottom save button */}
           <div className="absolute bottom-3 right-3">
             <Button
               size="sm"
@@ -272,7 +290,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
           </div>
         </div>
 
-        {/* Image title when not hovered */}
         {image.title && !isLoading && !isHovered && (
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
             <h3 className="text-white text-sm font-medium truncate">
@@ -285,4 +302,4 @@ const ImageCard: React.FC<ImageCardProps> = ({
   );
 };
 
-export default ImageCard;
+export default MasonryImageCard;

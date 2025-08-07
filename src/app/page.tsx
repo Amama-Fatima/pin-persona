@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import PersonalityScraper from "../components/PinterestScraper";
+import PersonalityScraper from "../components/PersonalityScraper";
 import { ThemeProvider } from "../components/ThemeProvider";
 
 export default function Home() {
