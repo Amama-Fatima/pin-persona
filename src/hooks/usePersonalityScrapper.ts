@@ -43,7 +43,7 @@ export const usePersonalityScraper = () => {
           ),
         }));
 
-        const response = await fetch("/api/scrape-pinterest", {
+        const response = await fetch("http://localhost:4000/scrape", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

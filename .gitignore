@@ -39,5 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-venv/
-__pycache__/
+pinterest-backend/node_modules
+pinterest-backend/.env

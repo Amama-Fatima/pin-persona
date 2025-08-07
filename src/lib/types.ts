@@ -28,3 +28,14 @@ export interface KeywordResponse {
   prompt_used: string;
   success: boolean;
 }
+
+export type ImageData = {
+  id: string;
+  url: string;
+  fallbackUrls: string[];
+  title: string;
+  description: string;
+  width?: number;
+  height?: number;
+  sourceUrl: string;
+};
