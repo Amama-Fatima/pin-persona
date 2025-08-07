@@ -40,4 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 pinterest-backend/node_modules
+pinterest-backend/dist
 pinterest-backend/.env
