@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import puppeteer, { Browser, Page } from "puppeteer";
-import { ScrapingResult } from "./types";
+import { PinterestImage, ScrapingResult } from "./types";
 
 export class PinterestScrapper {
   private browser: Browser | null = null;
@@ -96,25 +95,12 @@ export class PinterestScrapper {
   // }
 
   // Enhanced image extraction with multiple fallback URLs
-  private async extractImageData(
-    pins: any[],
-    maxImages: number
-  ): Promise<any[]> {
+  private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
     if (!this.page) return [];
 
     return await this.page.evaluate((maxImages: number) => {
       const pins = document.querySelectorAll('[data-test-id="pin"]');
-      type ImageData = {
-        id: string;
-        url: string;
-        fallbackUrls: string[];
-        title: string;
-        description: string;
-        width?: number;
-        height?: number;
-        sourceUrl: string;
-      };
-      const imageData: ImageData[] = [];
+      const imageData: PinterestImage[] = [];
 
       for (let i = 0; i < Math.min(pins.length, maxImages); i++) {
         const pin = pins[i];
@@ -240,7 +226,7 @@ export class PinterestScrapper {
         await this.page.waitForSelector('[data-test-id="pin"]', {
           timeout: 15000,
         });
-      } catch (error) {
+      } catch {
         // Try to handle potential cookie banners or login prompts
         const closeButtons = await this.page.$$(
           '[data-test-id="closeModal"], [aria-label="Close"], .close-button'
@@ -263,7 +249,7 @@ export class PinterestScrapper {
       const pins = await this.page.$$('[data-test-id="pin"]');
       console.log(`Found ${pins.length} pins`);
 
-      const images = await this.extractImageData(pins, limit);
+      const images = await this.extractImageData(limit);
 
       return {
         images,

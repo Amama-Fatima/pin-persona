@@ -42,9 +42,7 @@ const MasonryImageCard: React.FC<MasonryImageCardProps> = ({
     }
   };
 
-  const handleImageError = (
-    e: React.SyntheticEvent<HTMLImageElement, Event>
-  ) => {
+  const handleImageError = () => {
     console.log(`Image failed to load: ${allUrls[currentUrlIndex]}`);
 
     if (currentUrlIndex < allUrls.length - 1) {
