@@ -43,16 +43,19 @@ export const usePersonalityScraper = () => {
           ),
         }));
 
-        const response = await fetch("http://localhost:4000/scrape", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            keyword: keyword.trim(),
-            limit: 10,
-          }),
-        });
+        const response = await fetch(
+          "https://pin-persona-production.up.railway.app/scrape",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              keyword: keyword.trim(),
+              limit: 10,
+            }),
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`Failed to scrape images for keyword: ${keyword}`);
