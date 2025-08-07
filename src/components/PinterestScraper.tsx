@@ -22,7 +22,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import PersonalityInfoCard from "./PersonalityInfoCard";
-import KeywordSection from "./KeywordSection";
+import UnifiedImageFeed from "./UnifiedImageFeed"; // Import the new component
 import { usePersonalityScraper } from "../hooks/usePersonalityScrapper";
 
 const PersonalityScraper = () => {
@@ -73,6 +73,7 @@ const PersonalityScraper = () => {
 
   const completedKeywords = keywordResults.filter((r) => r.completed).length;
   const hasResults = personalityInfo && keywordResults.length > 0;
+  const hasImages = keywordResults.some((result) => result.images.length > 0);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -189,33 +190,20 @@ const PersonalityScraper = () => {
           />
         )}
 
-        {/* Keyword Results */}
-        {keywordResults.length > 0 && (
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <h2 className="text-2xl font-bold">Image Discovery Progress</h2>
-              <div className="flex-1 h-px bg-border"></div>
-              <span className="text-sm text-muted-foreground">
-                {completedKeywords} of {keywordResults.length} completed
-              </span>
-            </div>
-
-            <div className="space-y-6">
-              {keywordResults.map((keywordResult, index) => (
-                <KeywordSection
-                  key={`${keywordResult.keyword}-${index}`}
-                  keywordResult={keywordResult}
-                  onDownload={downloadImage}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Unified Image Feed*/}
+        {hasResults && (
+          <UnifiedImageFeed
+            keywordResults={keywordResults}
+            onDownload={downloadImage}
+            isLoading={isLoading}
+          />
         )}
 
         {/* Summary */}
         {hasResults &&
           completedKeywords === keywordResults.length &&
-          completedKeywords > 0 && (
+          completedKeywords > 0 &&
+          hasImages && (
             <Card className="border-border bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20">
               <CardContent className="flex items-center justify-between py-6">
                 <div>

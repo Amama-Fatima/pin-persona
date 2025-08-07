@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { PinterestImage } from "../lib/types";
 import { Button } from "./ui/button";
-import { ExternalLink, Download, Heart } from "lucide-react";
+import { ExternalLink, Download, Heart, Tag } from "lucide-react";
+
+interface EnhancedPinterestImage extends PinterestImage {
+  keyword?: string;
+}
 
 interface ImageCardProps {
-  image: PinterestImage;
+  image: EnhancedPinterestImage;
   onDownload: (image: PinterestImage) => void;
   onImageError?: (imageId: string, error: string) => void;
 }
@@ -20,6 +24,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
   const [imageError, setImageError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   // array of all possible URLs (primary + fallbacks)
   const allUrls = [image.url, ...(image.fallbackUrls || [])].filter(Boolean);
@@ -67,13 +72,26 @@ const ImageCard: React.FC<ImageCardProps> = ({
     setIsLoading(true);
   }, [image.id]);
 
+  // Handle tooltip visibility
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (image.keyword) {
+      setTimeout(() => setShowTooltip(true), 500); // Show tooltip after 500ms
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setShowTooltip(false);
+  };
+
   // Error fallback UI
   if (imageError) {
     return (
       <div
         className="group relative cursor-pointer break-inside-avoid mb-4"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-out">
           <div className="w-full h-48 flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 text-gray-500">
@@ -110,6 +128,16 @@ const ImageCard: React.FC<ImageCardProps> = ({
                 </a>
               </Button>
             </div>
+
+            {/* Keyword tooltip */}
+            {showTooltip && image.keyword && (
+              <div className="absolute top-3 left-3 bg-black/80 text-white text-xs px-3 py-2 rounded-full backdrop-blur-sm shadow-lg border border-white/20">
+                <div className="flex items-center gap-1">
+                  <Tag className="h-3 w-3" />
+                  <span className="capitalize">{image.keyword}</span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -119,8 +147,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
   return (
     <div
       className="group relative cursor-pointer break-inside-avoid mb-4"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Main Image Container */}
       <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-out">
@@ -161,6 +189,16 @@ const ImageCard: React.FC<ImageCardProps> = ({
             isHovered && !isLoading ? "opacity-100" : "opacity-0"
           }`}
         >
+          {/* Keyword tooltip - appears first, then fades when other controls appear */}
+          {showTooltip && image.keyword && (
+            <div className="absolute top-3 left-3 bg-black/80 text-white text-xs px-3 py-2 rounded-full backdrop-blur-sm shadow-lg border border-white/20 transition-opacity duration-200">
+              <div className="flex items-center gap-1">
+                <Tag className="h-3 w-3" />
+                <span className="capitalize">{image.keyword}</span>
+              </div>
+            </div>
+          )}
+
           {/* Top right actions */}
           <div className="absolute top-3 right-3 flex gap-2">
             <Button
@@ -234,6 +272,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
           </div>
         </div>
 
+        {/* Image title when not hovered */}
         {image.title && !isLoading && !isHovered && (
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
             <h3 className="text-white text-sm font-medium truncate">
