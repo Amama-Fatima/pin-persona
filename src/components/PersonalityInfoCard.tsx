@@ -44,7 +44,7 @@ const PersonalityInfoCard: React.FC<PersonalityInfoCardProps> = ({
   const keywords = personalityInfo.keywords.split(",").map((k) => k.trim());
 
   return (
-    <Card className="border-border bg-gradient-to-br from-background to-muted/30">
+    <Card className="border-border bg-gradient-to-br from-background to-muted/30 m-3">
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="space-y-2">
