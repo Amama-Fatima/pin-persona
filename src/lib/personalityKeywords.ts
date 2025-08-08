@@ -33,6 +33,15 @@ export async function getKeywordsForPersonality(
                   "time_period": "Classical Antiquity",
                   "bio": "The last active ruler of the Ptolemaic Kingdom, Cleopatra was a brilliant strategist, diplomat, and linguist who forged political alliances with Julius Caesar and Mark Antony while preserving Egypt's independence and legacy."
                 }
+                For fictional characters, their culture_region and time_period should reflect their fictional context
+                Example:
+                {
+                  "personality_name": "Superman",
+                  "culture_region": "Metropolis",
+                  "role": "Superhero",
+                  "time_period": "Modern Age",
+                  "bio": "Superman, also known as Clark Kent, is a superhero from the planet Krypton. He possesses superhuman abilities and fights for truth, justice, and the American way. He works as a journalist at the Daily Planet under the alias Clark Kent."
+                }
                 `,
               },
             ],
