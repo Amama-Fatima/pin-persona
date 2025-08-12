@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/scrape", async (req, res) => {
-  const { keyword, limit = 20 } = req.body;
+  const { keyword, limit = 5 } = req.body;
 
   if (!keyword) {
     return res.status(400).json({ error: "Keyword is required" });

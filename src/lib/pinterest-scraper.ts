@@ -204,7 +204,7 @@ export class PinterestScrapper {
 
   async scrapeImages(
     keyword: string,
-    limit: number = 20
+    limit: number = 5
   ): Promise<ScrapingResult> {
     if (!this.page) {
       throw new Error("Scraper not initialized. Call initialize() first.");

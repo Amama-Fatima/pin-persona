@@ -52,7 +52,7 @@ export const usePersonalityScraper = () => {
             },
             body: JSON.stringify({
               keyword: keyword.trim(),
-              limit: 10,
+              limit: 5,
             }),
           }
         );

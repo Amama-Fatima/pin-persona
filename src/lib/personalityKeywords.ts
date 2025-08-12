@@ -24,7 +24,7 @@ export async function getKeywordsForPersonality(
                 text: `
                 Who was ${personalityName}? Return a JSON object with the following keys:
                 personality_name, culture_region, role, time_period, bio.
-                The bio should be at most 300 characters long. It should be a brief description of the person, their achievements, ideologies, and their significance in history.
+                The bio should be at most 300 characters long. It should be a description of the person, their achievements, and their significance in history.
                 Example:
                 {
                   "personality_name": "Cleopatra",
@@ -40,7 +40,7 @@ export async function getKeywordsForPersonality(
                   "culture_region": "Metropolis",
                   "role": "Superhero",
                   "time_period": "Modern Age",
-                  "bio": "Superman, also known as Clark Kent, is a superhero from the planet Krypton. He possesses superhuman abilities and fights for truth, justice, and the American way. He works as a journalist at the Daily Planet under the alias Clark Kent."
+                  "bio": "Superman is a superhero from the planet Krypton who possesses superhuman abilities such as flight, heat vision, and incredible strength. He is a founding member of the Justice League and is dedicated to protecting Earth from powerful threats."
                 }
                 `,
               },
