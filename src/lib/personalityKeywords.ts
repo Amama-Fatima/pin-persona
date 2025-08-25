@@ -24,16 +24,16 @@ export async function getKeywordsForPersonality(
                 text: `
                 Who was ${personalityName}? Return a JSON object with the following keys:
                 personality_name, culture_region, role, time_period, bio.
-                The bio should be at most 300 characters long. It should be a description of the person, their achievements, and their significance in history.
+                The bio should be at most 500 characters long. It should describe the person's achievements, their role, work, and their significance in history.
                 Example:
                 {
                   "personality_name": "Cleopatra",
                   "culture_region": "Egypt",
                   "role": "Queen",
-                  "time_period": "Classical Antiquity",
-                  "bio": "The last active ruler of the Ptolemaic Kingdom, Cleopatra was a brilliant strategist, diplomat, and linguist who forged political alliances with Julius Caesar and Mark Antony while preserving Egypt's independence and legacy."
+                  "time_period": "Ptolemaic Period",
+                  "bio": "Cleopatra VII Philopator, last ruler of the Ptolemaic Kingdom of Egypt, was a brilliant strategist, diplomat, and linguist. Embracing Egyptian culture, she forged powerful alliances with Julius Caesar and Mark Antony to preserve her nation’s independence. Renowned for her intellect and charisma, she navigated political turmoil until her dramatic death, marking the end of Egypt’s pharaonic era and its absorption into the Roman Empire."
                 }
-                For fictional characters, their culture_region and time_period should reflect their fictional context
+                For fictional characters, their culture_region and time_period should reflect their fictional context.
                 Example:
                 {
                   "personality_name": "Superman",
@@ -59,7 +59,7 @@ export async function getKeywordsForPersonality(
 
     // Step 2: Generate Pinterest keywords
     const keywordResp = await fetch(
-      "https://Amama02-pinterest-persona-api.hf.space/generate",
+      "https://Amama02-pin-persona-25-august.hf.space/generate",
       {
         method: "POST",
         headers: {
@@ -68,10 +68,10 @@ export async function getKeywordsForPersonality(
         body: JSON.stringify(personalityData),
       }
     );
-
+    console.log("keyword resp: in api", keywordResp);
     const keywordData: KeywordResponse = await keywordResp.json();
-    console.log("Personality Data: in api", personalityData);
-    console.log("Keywords Data: in api", keywordData.prompt_used);
+    console.log("keyword Data: in api", keywordData);
+    // console.log("Keywords Data: in api", keywordData.prompt_used);
     return keywordData;
   } catch (error) {
     console.error("Error generating keywords:", error);
