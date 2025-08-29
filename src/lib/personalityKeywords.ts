@@ -22,27 +22,37 @@ export async function getKeywordsForPersonality(
               {
                 type: "text",
                 text: `
-                Who was ${personalityName}? Return a JSON object with the following keys:
-                personality_name, culture_region, role, time_period, bio.
-                The bio should be at most 500 characters long. It should describe the person's achievements, their role, work, and their significance in history.
-                Example:
-                {
-                  "personality_name": "Cleopatra",
-                  "culture_region": "Egypt",
-                  "role": "Queen",
-                  "time_period": "Ptolemaic Period",
-                  "bio": "Cleopatra VII Philopator, last ruler of the Ptolemaic Kingdom of Egypt, was a brilliant strategist, diplomat, and linguist. Embracing Egyptian culture, she forged powerful alliances with Julius Caesar and Mark Antony to preserve her nation’s independence. Renowned for her intellect and charisma, she navigated political turmoil until her dramatic death, marking the end of Egypt’s pharaonic era and its absorption into the Roman Empire."
-                }
-                For fictional characters, their culture_region and time_period should reflect their fictional context.
-                Example:
-                {
-                  "personality_name": "Superman",
-                  "culture_region": "Metropolis",
-                  "role": "Superhero",
-                  "time_period": "Modern Age",
-                  "bio": "Superman is a superhero from the planet Krypton who possesses superhuman abilities such as flight, heat vision, and incredible strength. He is a founding member of the Justice League and is dedicated to protecting Earth from powerful threats."
-                }
-                `,
+          Generate detailed information about ${personalityName}. Return ONLY a valid JSON object with these exact keys:
+          personality_name, culture_region, role, time_period, bio
+
+          REQUIREMENTS:
+          - personality_name: Use the exact name provided
+          - culture_region: Be specific (e.g., "French", "Ancient Greek", "Japanese", "British")
+          - role: Include 2-3 specific roles separated by commas (e.g., "Physicist, Chemist", "Roman Emperor, Stoic Philosopher")
+          - time_period: Include both era and century (e.g., "Renaissance, 15th-16th Century", "Islamic Golden Age, 11th Century")
+          - bio: 400 characters. Must include specific achievements, major works, historical significance, and key contributions
+
+          HISTORICAL FIGURE EXAMPLE:
+          {
+            "personality_name": "Albert Einstein",
+            "culture_region": "German-American",
+            "role": "Theoretical Physicist, Nobel Laureate",
+            "time_period": "Modern Physics Era, 20th Century",
+            "bio": "Albert Einstein revolutionized physics with his theories of relativity, fundamentally changing our understanding of space, time, and gravity. His mass-energy equation E=mc² enabled nuclear physics. Winner of the Nobel Prize in Physics for photoelectric effect work, he became a symbol of scientific genius and humanitarian values."
+          }
+
+          FICTIONAL CHARACTER EXAMPLE:
+          {
+            "personality_name": "Sherlock Holmes",
+            "culture_region": "British",
+            "role": "Detective (Fictional Character)",
+            "time_period": "Victorian Era, Late 19th Century",
+            "bio": "Sherlock Holmes is a fictional detective created by Arthur Conan Doyle, renowned for his extraordinary deductive reasoning and forensic skills. Operating from 221B Baker Street with Dr. Watson, he solved complex mysteries using scientific methods and logical analysis, becoming literature's most famous detective."
+          }
+
+          Generate information for: ${personalityName}
+          Return ONLY the JSON object, no additional text.
+          `,
               },
             ],
           },
@@ -55,8 +65,9 @@ export async function getKeywordsForPersonality(
     // Parse the model output (assuming it returns JSON text inside choices[0].message.content)
     const rawContent = openRouterData.choices?.[0]?.message?.content;
     const jsonString = rawContent?.replace(/```json|```/g, "").trim();
+    console.log("JSON String:", jsonString);
     const personalityData: PersonalityData = JSON.parse(jsonString);
-
+    console.log("PERSONALITY DATA ", personalityData);
     // Step 2: Generate Pinterest keywords
     const keywordResp = await fetch(
       "https://Amama02-pin-persona-25-august.hf.space/generate",
