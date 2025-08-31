@@ -29,8 +29,8 @@ export async function getKeywordsForPersonality(
           - personality_name: Use the exact name provided
           - culture_region: Be specific (e.g., "French", "Ancient Greek", "Japanese", "British")
           - role: Include 2-3 specific roles separated by commas (e.g., "Physicist, Chemist", "Roman Emperor, Stoic Philosopher")
-          - time_period: Include both era and century (e.g., "Renaissance, 15th-16th Century", "Islamic Golden Age, 11th Century")
-          - bio: 400 characters. Must include specific achievements, major works, historical significance, and key contributions
+          - time_period: Include both era and century (e.g., "Renaissance, 15th-16th Century", "Islamic Golden Age, 11th Century", "World War II")
+          - bio: 400 characters. Must include specific achievements, major works, historical significance, and key contributions. Keep sentences in bio short.
 
           HISTORICAL FIGURE EXAMPLE:
           {
@@ -62,7 +62,6 @@ export async function getKeywordsForPersonality(
 
     const openRouterData = await resp.json();
 
-    // Parse the model output (assuming it returns JSON text inside choices[0].message.content)
     const rawContent = openRouterData.choices?.[0]?.message?.content;
     const jsonString = rawContent?.replace(/```json|```/g, "").trim();
     console.log("JSON String:", jsonString);
@@ -89,3 +88,5 @@ export async function getKeywordsForPersonality(
     throw error;
   }
 }
+
+// https://Amama02-pinterest-keyword-generator.hf.space/generate
