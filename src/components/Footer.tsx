@@ -18,7 +18,7 @@ const Footer = () => {
         "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white",
     },
     {
-      href: "https://github.com/Amama-Fatima/pin-persona/blob/main/notebooks/Pinterest_keywords_fine_tuned_flan_t5_base.ipynb",
+      href: "https://github.com/Amama-Fatima/pin-persona/blob/main/notebooks/flan-t5-base-lora-finetuning.ipynb",
       icon: BookOpen,
       label: "Fine-tuning Code",
       className:

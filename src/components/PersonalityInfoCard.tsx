@@ -20,13 +20,13 @@ const PersonalityInfoCard: React.FC<PersonalityInfoCardProps> = ({
   const getPersonalityDataFromPrompt = () => {
     try {
       const match = personalityInfo.prompt_used.match(
-        /Generate Pinterest keywords for (.+?) - Role: (.+?) \| Bio: (.+?)\.{3}/
+        /Role:\s*(.+?)\s*\|\s*Period:.*?\|\s*Bio:\s*(.+?)(?:- Generate|$)/
       );
       if (match) {
         return {
-          name: match[1],
-          role: match[2],
-          bio: match[3],
+          name: personalityInfo.personality,
+          role: match[1].trim(),
+          bio: match[2].trim(),
         };
       }
     } catch (error) {
@@ -35,7 +35,7 @@ const PersonalityInfoCard: React.FC<PersonalityInfoCardProps> = ({
 
     return {
       name: personalityInfo.personality,
-      role: "Historical Figure",
+      role: "Unknown Role",
       bio: "A notable personality from history.",
     };
   };

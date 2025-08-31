@@ -109,8 +109,8 @@ const PersonalityScraper = () => {
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Discover and collect Pinterest images of historical
-                personalities through AI-powered keyword generation
+                Generate Pinterest keywords for historical and fictional
+                personalities with AI.
               </p>
             </div>
 
@@ -154,12 +154,12 @@ const PersonalityScraper = () => {
                           ) : isLoading ? (
                             <>
                               <Loader2 className="h-5 w-5 animate-spin mr-2" />
-                              Scraping Images...
+                              Scraping
                             </>
                           ) : (
                             <>
                               <Search className="h-5 w-5 mr-2" />
-                              Start Discovery
+                              Generate
                             </>
                           )}
                         </Button>
@@ -219,8 +219,8 @@ const PersonalityScraper = () => {
                   Analyzing {personalityName}...
                 </p>
                 <p className="text-muted-foreground text-center max-w-md">
-                  We&apos;re gathering information about this personality and
-                  generating relevant Pinterest keywords
+                  Gathering information about this personality and generating
+                  relevant Pinterest keywords
                 </p>
               </CardContent>
             </Card>
