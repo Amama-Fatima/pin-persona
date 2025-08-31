@@ -2,7 +2,6 @@
 
 Pin Persona explores how historical and cultural figures might be represented visually on Pinterest. It generates keyword phrases that reflect a personality’s aesthetic, culture, role, time period, and biographical context — optimized for Pinterest-style search and discovery.
 
-_If Seneca had a Pinterest board, what would be on it?_
 
 ## Live Demo
 
@@ -35,33 +34,15 @@ The training set consists of 101 curated examples in the following structure:
 
 ```json
 {
-  "name": "Seneca",
-  "culture_region": "Roman",
-  "role": "Philosopher, Statesman",
-  "time_period": "Ancient",
-  "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. His writings explore ethics, virtue, and resilience under adversity.",
-  "target_text": "roman stoicism moodboard, candlelit study theme, Roman philosophy aesthetic, marble busts visual, ancient roman libraries core, roman statesman aesthetic"
-}
+    "name": "Seneca",
+    "culture_region": "Roman",
+    "role": "Stoic Philosopher, Roman Statesman",
+    "time_period": "Roman Empire, 1st Century CE",
+    "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. He wrote on topics like ethics, virtue, and resilience. His writings include moral letters, tragedies, and philosophical treatises that influenced both ancient and modern thought.",
+    "target_text": "roman empire aesthetics, stoic philosophy aesthetics, roman stoicism aesthetics, 1st century rome aesthetics, roman statesman aesthetics, seneca     philosophy aesthetics, roman ethics aesthetics, stoic writings aesthetics, classical philosophy aesthetics"
+  }
 ```
 
 The `target_text` field contains the expected Pinterest-style keywords for the given personality.
 
-### Inference Format
 
-During inference, the model is prompted with a structured input in natural language, using the following format:
-
-```text
-Generate Pinterest keywords for {name}. Culture: {culture} | Period: {time_period} | Role: {role} | Bio: {bio} Keywords should be visual, searchable on Pinterest, and capture their aesthetic essence. The Culture, Role, Period and bio give important information about the personality. Take them into account when generating keywords.
-```
-
-#### Example Prompt
-
-```text
-Generate Pinterest keywords for Seneca. Culture: Roman | Period: Ancient | Role: Philosopher, Statesman | Bio: Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. His writings explore ethics, virtue, and resilience under adversity. Keywords should be visual, searchable on Pinterest, and capture their aesthetic essence. The Culture, Role, Period and bio give important information about the personality. Take them into account when generating keywords.
-```
-
-#### Example Output
-
-```text
-roman stoicism moodboard, candlelit study theme, Roman philosophy aesthetic, marble busts visual, ancient roman libraries core, roman statesman aesthetic
-```
