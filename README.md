@@ -9,6 +9,8 @@ Pin Persona explores how historical and cultural figures might be represented vi
 - 🚀 Model on Hugging Face: [pinterest-personality-keywords-v3](https://huggingface.co/pinterest-personality-keywords-v3)
 - 🛠️ API Space: [pinterest-persona-api](https://huggingface.co/spaces/pinterest-persona-api)
 
+  https://github.com/user-attachments/assets/2c6e514e-0fc8-4b5d-8e16-a5341211d942
+
 ## How It Works (Frontend Workflow)
 
 1. The user enters the name of a famous personality.
