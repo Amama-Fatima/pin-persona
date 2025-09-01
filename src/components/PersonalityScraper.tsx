@@ -110,7 +110,7 @@ const PersonalityScraper = () => {
 
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Generate Pinterest keywords for historical and fictional
-                personalities with AI.
+                personalities.
               </p>
             </div>
 
@@ -211,16 +211,16 @@ const PersonalityScraper = () => {
             <Card className="border-border">
               <CardContent className="flex flex-col items-center justify-center py-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <User className="h-8 w-8 text-primary" />
-                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                  <Sparkles className="h-8 w-8 text-primary" />
+                  {/* <User className="h-8 w-8 text-primary" /> */}
+                  <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                  {/* <Sparkles className="h-8 w-8 text-primary" /> */}
                 </div>
                 <p className="text-lg font-medium mb-2">
                   Analyzing {personalityName}...
                 </p>
                 <p className="text-muted-foreground text-center max-w-md">
                   Gathering information about this personality and generating
-                  relevant Pinterest keywords
+                  relevant Pinterest keywords. This might take a few seconds.
                 </p>
               </CardContent>
             </Card>
