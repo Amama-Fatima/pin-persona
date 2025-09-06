@@ -2,7 +2,6 @@
 
 Pin Persona explores how historical and cultural figures might be represented visually on Pinterest. It generates keyword phrases that reflect a personality’s aesthetic, culture, role, time period, and biographical context — optimized for Pinterest-style search and discovery.
 
-
 ## Live Demo
 
 - 🔗 Website: [https://pin-persona.vercel.app](https://pin-persona.vercel.app/)
@@ -28,7 +27,7 @@ Pin Persona explores how historical and cultural figures might be represented vi
 
 ### Base Model
 
-Fine-tuned on google/flan-t5-base using LoRA (Low-Rank Adaptation) for efficient parameter updates.
+Fine-tuned on google/flan-t5-base using LoRA for efficient parameter updates.
 
 ### Dataset
 
@@ -36,15 +35,19 @@ The training set consists of 101 curated examples in the following structure:
 
 ```json
 {
-    "name": "Seneca",
-    "culture_region": "Roman",
-    "role": "Stoic Philosopher, Roman Statesman",
-    "time_period": "Roman Empire, 1st Century CE",
-    "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. He wrote on topics like ethics, virtue, and resilience. His writings include moral letters, tragedies, and philosophical treatises that influenced both ancient and modern thought.",
-    "target_text": "roman empire aesthetics, stoic philosophy aesthetics, roman stoicism aesthetics, 1st century rome aesthetics, roman statesman aesthetics, seneca     philosophy aesthetics, roman ethics aesthetics, stoic writings aesthetics, classical philosophy aesthetics"
-  }
+  "name": "Seneca",
+  "culture_region": "Roman",
+  "role": "Stoic Philosopher, Roman Statesman",
+  "time_period": "Roman Empire, 1st Century CE",
+  "bio": "Lucius Annaeus Seneca was a Roman Stoic philosopher, statesman, and advisor to Emperor Nero. He wrote on topics like ethics, virtue, and resilience. His writings include moral letters, tragedies, and philosophical treatises that influenced both ancient and modern thought.",
+  "target_text": "roman empire aesthetics, stoic philosophy aesthetics, roman stoicism aesthetics, 1st century rome aesthetics, roman statesman aesthetics, seneca     philosophy aesthetics, roman ethics aesthetics, stoic writings aesthetics, classical philosophy aesthetics"
+}
 ```
 
 The `target_text` field contains the expected Pinterest-style keywords for the given personality.
 
+---
 
+### The ping-hf API Route
+
+The ping-hf API route ensures that the Hugging Face Space does not sleep in case of inactivity.

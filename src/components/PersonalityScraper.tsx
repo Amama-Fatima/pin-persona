@@ -13,14 +13,7 @@ import {
   // CardTitle,
 } from "./ui/card";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import {
-  Search,
-  Loader2,
-  AlertCircle,
-  Trash2,
-  User,
-  Sparkles,
-} from "lucide-react";
+import { Search, Loader2, AlertCircle, Trash2, User } from "lucide-react";
 import PersonalityInfoCard from "./PersonalityInfoCard";
 import UnifiedImageFeed from "./UnifiedImageFeed"; // Import the new component
 import { usePersonalityScraper } from "../hooks/usePersonalityScrapper";
