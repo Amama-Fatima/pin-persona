@@ -1,33 +1,43 @@
 # Use official Node.js base image
 FROM node:18-slim
 
-# Install dependencies required for Chrome/Chromium
+# Install dependencies for Chromium
 RUN apt-get update && apt-get install -y \
-  wget gnupg unzip \
-  ca-certificates fonts-liberation libasound2 \
-  libatk1.0-0 libatk-bridge2.0-0 libcups2 libdbus-1-3 \
-  libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
-  libxrandr2 libgbm1 libgtk-3-0 libnspr4 libnss3 \
-  libxss1 libxtst6 xdg-utils && \
-  rm -rf /var/lib/apt/lists/*
-
-# Install Chromium (stable)
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    apt-get install -y ./google-chrome-stable_current_amd64.deb && \
-    rm google-chrome-stable_current_amd64.deb
+    chromium \
+    ca-certificates \
+    fonts-liberation \
+    libatk-bridge2.0-0 \
+    libatk1.0-0 \
+    libatspi2.0-0 \
+    libdrm2 \
+    libgbm1 \
+    libgtk-3-0 \
+    libnspr4 \
+    libnss3 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxfixes3 \
+    libxrandr2 \
+    libxkbcommon0 \
+    libx11-xcb1 \
+    wget \
+    --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
 
-# Copy package files and install deps
+# Copy package.json and lockfile first (for better caching)
 COPY package*.json ./
+
+# Install Node.js dependencies
 RUN npm install --omit=dev
 
-# Copy app code
+# Copy rest of the app
 COPY . .
 
-# Expose port (Koyeb expects this from PORT env var)
-EXPOSE 8000
+# Expose port (Koyeb expects PORT env var)
+EXPOSE 8080
 
-# Start app
+# Start command
 CMD ["npm", "start"]
