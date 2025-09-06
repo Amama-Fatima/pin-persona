@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import puppeteer from "puppeteer";
 import type { PinterestImage, ScrapingResult } from "./types";
 type Browser = import("puppeteer").Browser;
@@ -8,40 +9,85 @@ export class PinterestScrapper {
   private page: Page | null = null;
 
   async initialize(): Promise<void> {
-    this.browser = await puppeteer.launch({
-      headless: true,
-      args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-accelerated-2d-canvas",
-        "--no-first-run",
-        "--no-zygote",
-        "--disable-gpu",
-        "--disable-web-security", // Allow cross-origin requests
-        "--disable-features=VizDisplayCompositor",
-      ],
-    });
+    try {
+      // Try to get Chrome executable path
+      let executablePath: string | undefined;
 
-    this.page = await this.browser.newPage();
+      // Check if we're in a production environment (like Render)
+      if (process.env.NODE_ENV === "production") {
+        // Try common Chrome paths on Linux systems
+        const possiblePaths = [
+          "/opt/render/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome",
+          "/opt/render/.cache/puppeteer/chrome/linux-131.0.6778.69/chrome-linux64/chrome",
+          "/opt/render/.cache/puppeteer/chrome/linux-140.0.7339.80/chrome-linux64/chrome",
+          "/usr/bin/google-chrome",
+          "/usr/bin/google-chrome-stable",
+          "/usr/bin/chromium-browser",
+        ];
 
-    // Set a more realistic user agent
-    await this.page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    );
+        // Try to find Chrome executable
+        const fs = require("fs");
+        for (const path of possiblePaths) {
+          try {
+            if (fs.existsSync(path)) {
+              executablePath = path;
+              console.log(`Found Chrome at: ${path}`);
+              break;
+            }
+          } catch (e) {
+            console.error(`Error checking path ${path}:`, e);
+            // Continue to next path
+          }
+        }
+      }
 
-    // Set additional headers to appear more legitimate
-    await this.page.setExtraHTTPHeaders({
-      Accept:
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.5",
-      "Accept-Encoding": "gzip, deflate, br",
-      DNT: "1",
-      Connection: "keep-alive",
-      "Upgrade-Insecure-Requests": "1",
-    });
+      this.browser = await puppeteer.launch({
+        headless: true,
+        executablePath,
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-accelerated-2d-canvas",
+          "--no-first-run",
+          "--no-zygote",
+          "--disable-gpu",
+          "--disable-web-security", // Allow cross-origin requests
+          "--disable-features=VizDisplayCompositor",
+          "--disable-background-timer-throttling",
+          "--disable-backgrounding-occluded-windows",
+          "--disable-renderer-backgrounding",
+          "--single-process", // Important for cloud platforms
+          "--no-default-browser-check",
+          "--disable-extensions",
+          "--disable-plugins",
+          "--disable-default-apps",
+        ],
+      });
 
-    await this.page.setViewport({ width: 1280, height: 800 });
+      this.page = await this.browser.newPage();
+
+      // Set a more realistic user agent
+      await this.page.setUserAgent(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      );
+
+      // Set additional headers to appear more legitimate
+      await this.page.setExtraHTTPHeaders({
+        Accept:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        DNT: "1",
+        Connection: "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+      });
+
+      await this.page.setViewport({ width: 1280, height: 800 });
+    } catch (error) {
+      console.error("Failed to initialize browser:", error);
+      throw new Error(`Browser initialization failed: ${error}`);
+    }
   }
 
   // Enhanced image extraction with multiple fallback URLs
@@ -172,31 +218,51 @@ export class PinterestScrapper {
       )}`;
 
       console.log(`Navigating to: ${searchUrl}`);
+
+      // Add some delay to seem more human-like
+      await new Promise((resolve) =>
+        setTimeout(resolve, 1000 + Math.random() * 2000)
+      );
+
       await this.page.goto(searchUrl, {
-        waitUntil: "networkidle2",
-        timeout: 30000,
+        waitUntil: "networkidle0",
+        timeout: 60000,
       });
+
+      // Wait a bit more after page load
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Wait for Pinterest to load and check if we need to handle any overlays
       try {
         await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 15000,
+          timeout: 20000,
         });
       } catch {
+        // Check if we hit a rate limit or access denied page
+        const pageContent = await this.page.content();
+        if (
+          pageContent.includes("Access denied") ||
+          pageContent.includes("rate limit")
+        ) {
+          throw new Error("Pinterest is blocking requests - try again later");
+        }
+
         // Try to handle potential cookie banners or login prompts
         const closeButtons = await this.page.$$(
-          '[data-test-id="closeModal"], [aria-label="Close"], .close-button'
+          '[data-test-id="closeModal"], [aria-label="Close"], .close-button, [data-test-id="dismiss-button"]'
         );
-        for (const button of closeButtons) {
-          try {
-            await button.click();
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-          } catch {}
+        if (closeButtons && closeButtons.length > 0) {
+          for (const button of closeButtons) {
+            try {
+              await button.click();
+              await new Promise((resolve) => setTimeout(resolve, 1000));
+            } catch {}
+          }
         }
 
         // Try waiting for pins again
         await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 10000,
+          timeout: 15000,
         });
       }
 
