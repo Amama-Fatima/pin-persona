@@ -44,7 +44,7 @@ export const usePersonalityScraper = () => {
         }));
 
         const response = await fetch(
-          "https://pin-persona-production.up.railway.app/scrape",
+          "https://pin-persona.onrender.com/scrape",
           {
             method: "POST",
             headers: {
