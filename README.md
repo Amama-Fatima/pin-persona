@@ -8,7 +8,7 @@ Pin Persona explores how historical and cultural figures might be represented vi
 - 🚀 Model on Hugging Face: [pinterest-personality-keywords-25-August](https://huggingface.co/Amama02/pinterest-personality-keywords-25-August)
 - 🛠️ API Space: [pinterest-persona-api](https://huggingface.co/spaces/Amama02/pin-persona-25-august)
 
-  https://github.com/user-attachments/assets/2c6e514e-0fc8-4b5d-8e16-a5341211d942
+  https://github.com/user-attachments/assets/8ebe4cbb-ed61-49d6-9248-6818e39a89cd
 
 ## How It Works (Frontend Workflow)
 
