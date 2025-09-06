@@ -10,7 +10,6 @@ export class PinterestScrapper {
   async initialize(): Promise<void> {
     this.browser = await puppeteer.launch({
       headless: true,
-      executablePath: "/usr/bin/chromium",
       args: [
         "--no-sandbox",
         "--disable-setuid-sandbox",
