@@ -38,6 +38,19 @@ app.post("/scrape", async (req, res) => {
   }
 });
 
+app.get("/test", async (req, res) => {
+  const scraper = new PinterestScrapper();
+  try {
+    await scraper.initialize();
+    await scraper.close();
+    res.json({ success: true, message: "Browser works!" });
+  } catch (error) {
+    console.error("Browser test failed:", error);
+    await scraper.close();
+    res.status(500).json({ error: "Browser failed to start" });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

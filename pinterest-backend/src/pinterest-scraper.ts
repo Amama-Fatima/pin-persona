@@ -18,7 +18,7 @@ export class PinterestScrapper {
         "--no-first-run",
         "--no-zygote",
         "--disable-gpu",
-        "--disable-web-security", // Allow cross-origin requests
+        "--disable-web-security",
         "--disable-features=VizDisplayCompositor",
         "--single-process",
         "--no-crash-upload",
@@ -31,12 +31,14 @@ export class PinterestScrapper {
 
     this.page = await this.browser.newPage();
 
-    // Set a more realistic user agent
+    // Set longer timeouts
+    this.page.setDefaultNavigationTimeout(90000); // 90 seconds
+    this.page.setDefaultTimeout(90000);
+
     await this.page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
     );
 
-    // Set additional headers to appear more legitimate
     await this.page.setExtraHTTPHeaders({
       Accept:
         "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -50,7 +52,6 @@ export class PinterestScrapper {
     await this.page.setViewport({ width: 1280, height: 800 });
   }
 
-  // Enhanced image extraction with multiple fallback URLs
   private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
     if (!this.page) return [];
 
@@ -68,7 +69,6 @@ export class PinterestScrapper {
           const originalUrl = imgElement.src;
           const fallbackUrls: string[] = [originalUrl];
 
-          // Generate multiple fallback URLs
           if (originalUrl.includes("/236x/")) {
             fallbackUrls.push(originalUrl.replace("/236x/", "/474x/"));
             fallbackUrls.push(originalUrl.replace("/236x/", "/564x/"));
@@ -79,7 +79,6 @@ export class PinterestScrapper {
             fallbackUrls.push(originalUrl.replace("/474x/", "/originals/"));
           }
 
-          // Try to get higher resolution URL
           let primaryUrl = originalUrl;
           if (originalUrl.includes("/236x/")) {
             primaryUrl = originalUrl.replace("/236x/", "/originals/");
@@ -90,7 +89,7 @@ export class PinterestScrapper {
           const imageObj: PinterestImage = {
             id: `pin_${i}_${Date.now()}`,
             url: primaryUrl,
-            fallbackUrls: [...new Set(fallbackUrls)], // Remove duplicates
+            fallbackUrls: [...new Set(fallbackUrls)],
             title: imgElement.alt || `Pinterest image ${i + 1}`,
             description:
               pin.querySelector('[data-test-id="pin-description"]')
@@ -99,6 +98,7 @@ export class PinterestScrapper {
               "",
             sourceUrl: linkElement?.href || "",
           };
+
           if (typeof imgElement.naturalWidth === "number") {
             imageObj.width = imgElement.naturalWidth;
           }
@@ -113,17 +113,15 @@ export class PinterestScrapper {
     }, maxImages);
   }
 
-  // Scrolls the page to load more images up to the specified limit
   private async autoScroll(targetImages: number): Promise<void> {
     if (!this.page) return;
 
     let lastHeight = 0;
     let scrollAttempts = 0;
-    const maxScrollAttempts = 15; // Increased attempts
+    const maxScrollAttempts = 10;
     let stableCount = 0;
 
     while (scrollAttempts < maxScrollAttempts && stableCount < 3) {
-      // Check current number of loaded images
       const currentImages = await this.page.$$eval(
         '[data-test-id="pin"]',
         (pins) => pins.length
@@ -135,13 +133,11 @@ export class PinterestScrapper {
         break;
       }
 
-      // Scroll down gradually
       await this.page.evaluate(() => {
         window.scrollBy(0, window.innerHeight);
       });
 
-      // Wait for new content to load with longer timeout
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       const newHeight = await this.page.evaluate(
         () => document.body.scrollHeight
@@ -156,11 +152,7 @@ export class PinterestScrapper {
       }
 
       lastHeight = newHeight;
-
-      // Add random delay to seem more human-like
-      await new Promise((resolve) =>
-        setTimeout(resolve, Math.random() * 1000 + 1000)
-      );
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     }
   }
 
@@ -176,33 +168,37 @@ export class PinterestScrapper {
       const searchUrl = `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(
         keyword
       )}`;
-
       console.log(`Navigating to: ${searchUrl}`);
+
+      // Simple navigation with longer timeout
       await this.page.goto(searchUrl, {
-        waitUntil: "networkidle2",
-        timeout: 30000,
+        waitUntil: "load",
+        timeout: 80000,
       });
 
-      // Wait for Pinterest to load and check if we need to handle any overlays
+      // Wait a bit for page to settle
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+
       try {
         await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 15000,
+          timeout: 30000,
         });
       } catch {
-        // Try to handle potential cookie banners or login prompts
+        // If pins not found, try to close any modals
         const closeButtons = await this.page.$$(
           '[data-test-id="closeModal"], [aria-label="Close"], .close-button'
         );
+
         for (const button of closeButtons) {
           try {
             await button.click();
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, 2000));
           } catch {}
         }
 
-        // Try waiting for pins again
+        // Try again to find pins
         await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 10000,
+          timeout: 20000,
         });
       }
 
