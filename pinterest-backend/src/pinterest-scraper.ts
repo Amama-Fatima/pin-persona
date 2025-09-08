@@ -20,6 +20,12 @@ export class PinterestScrapper {
         "--disable-gpu",
         "--disable-web-security", // Allow cross-origin requests
         "--disable-features=VizDisplayCompositor",
+        "--single-process",
+        "--no-crash-upload",
+        "--disable-background-timer-throttling",
+        "--disable-backgrounding-occluded-windows",
+        "--disable-renderer-backgrounding",
+        "--disable-extensions",
       ],
     });
 
