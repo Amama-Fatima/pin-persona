@@ -93,10 +93,10 @@ export class PinterestScrapper {
         if (imgElement && imgElement.src) {
           const originalUrl = imgElement.src;
 
-          let primaryUrl = originalUrl;
-          if (originalUrl.includes("/236x/")) {
-            primaryUrl = originalUrl.replace("/236x/", "/474x/");
-          }
+          const primaryUrl = originalUrl;
+          // if (originalUrl.includes("/236x/")) {
+          //   primaryUrl = originalUrl.replace("/236x/", "/474x/");
+          // }
 
           const imageObj: PinterestImage = {
             id: `pin_${i}_${Date.now()}`,
