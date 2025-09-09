@@ -26,30 +26,55 @@ export class PinterestScrapper {
         "--disable-backgrounding-occluded-windows",
         "--disable-renderer-backgrounding",
         "--disable-extensions",
+        // Speed optimizations
+        "--memory-pressure-off",
+        "--disable-features=TranslateUI,BlinkGenPropertyTrees",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--disable-default-apps",
+        "--aggressive-cache-discard",
       ],
     });
 
     this.page = await this.browser.newPage();
 
-    // Set longer timeouts
-    this.page.setDefaultNavigationTimeout(90000); // 90 seconds
-    this.page.setDefaultTimeout(90000);
+    this.page.setDefaultNavigationTimeout(45000);
+    this.page.setDefaultTimeout(30000);
+
+    // Blocking heavy resources for speed
+    await this.page.setRequestInterception(true);
+    this.page.on("request", (req) => {
+      const resourceType = req.resourceType();
+      const url = req.url();
+
+      if (
+        resourceType === "stylesheet" ||
+        resourceType === "font" ||
+        resourceType === "media" ||
+        url.includes("google-analytics") ||
+        url.includes("googletagmanager") ||
+        url.includes("facebook.net") ||
+        url.includes("doubleclick") ||
+        url.includes("ads")
+      ) {
+        req.abort();
+      } else {
+        req.continue();
+      }
+    });
 
     await this.page.setUserAgent(
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
     );
 
     await this.page.setExtraHTTPHeaders({
-      Accept:
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.5",
-      "Accept-Encoding": "gzip, deflate, br",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
       DNT: "1",
       Connection: "keep-alive",
-      "Upgrade-Insecure-Requests": "1",
     });
 
-    await this.page.setViewport({ width: 1280, height: 800 });
+    await this.page.setViewport({ width: 1024, height: 768 });
   }
 
   private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
@@ -67,44 +92,25 @@ export class PinterestScrapper {
 
         if (imgElement && imgElement.src) {
           const originalUrl = imgElement.src;
-          const fallbackUrls: string[] = [originalUrl];
-
-          if (originalUrl.includes("/236x/")) {
-            fallbackUrls.push(originalUrl.replace("/236x/", "/474x/"));
-            fallbackUrls.push(originalUrl.replace("/236x/", "/564x/"));
-            fallbackUrls.push(originalUrl.replace("/236x/", "/originals/"));
-          } else if (originalUrl.includes("/474x/")) {
-            fallbackUrls.push(originalUrl.replace("/474x/", "/236x/"));
-            fallbackUrls.push(originalUrl.replace("/474x/", "/564x/"));
-            fallbackUrls.push(originalUrl.replace("/474x/", "/originals/"));
-          }
 
           let primaryUrl = originalUrl;
           if (originalUrl.includes("/236x/")) {
-            primaryUrl = originalUrl.replace("/236x/", "/originals/");
-          } else if (originalUrl.includes("/474x/")) {
-            primaryUrl = originalUrl.replace("/474x/", "/originals/");
+            primaryUrl = originalUrl.replace("/236x/", "/474x/");
           }
 
           const imageObj: PinterestImage = {
             id: `pin_${i}_${Date.now()}`,
             url: primaryUrl,
-            fallbackUrls: [...new Set(fallbackUrls)],
+            fallbackUrls: [originalUrl, primaryUrl],
             title: imgElement.alt || `Pinterest image ${i + 1}`,
             description:
               pin.querySelector('[data-test-id="pin-description"]')
-                ?.textContent ||
-              pin.querySelector('[data-test-id="pin-title"]')?.textContent ||
-              "",
+                ?.textContent || "",
             sourceUrl: linkElement?.href || "",
+            width: imgElement.naturalWidth || 0,
+            height: imgElement.naturalHeight || 0,
           };
 
-          if (typeof imgElement.naturalWidth === "number") {
-            imageObj.width = imgElement.naturalWidth;
-          }
-          if (typeof imgElement.naturalHeight === "number") {
-            imageObj.height = imgElement.naturalHeight;
-          }
           imageData.push(imageObj);
         }
       }
@@ -113,15 +119,13 @@ export class PinterestScrapper {
     }, maxImages);
   }
 
-  private async autoScroll(targetImages: number): Promise<void> {
+  private async fastScroll(targetImages: number): Promise<void> {
     if (!this.page) return;
 
-    let lastHeight = 0;
-    let scrollAttempts = 0;
-    const maxScrollAttempts = 10;
-    let stableCount = 0;
+    let attempts = 0;
+    const maxAttempts = 5;
 
-    while (scrollAttempts < maxScrollAttempts && stableCount < 3) {
+    while (attempts < maxAttempts) {
       const currentImages = await this.page.$$eval(
         '[data-test-id="pin"]',
         (pins) => pins.length
@@ -133,26 +137,15 @@ export class PinterestScrapper {
         break;
       }
 
+      // Fast, aggressive scrolling
       await this.page.evaluate(() => {
-        window.scrollBy(0, window.innerHeight);
+        window.scrollBy(0, window.innerHeight * 2);
       });
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      const newHeight = await this.page.evaluate(
-        () => document.body.scrollHeight
-      );
-
-      if (newHeight === lastHeight) {
-        scrollAttempts++;
-        stableCount++;
-      } else {
-        scrollAttempts = 0;
-        stableCount = 0;
-      }
-
-      lastHeight = newHeight;
+      // Shorter wait time
       await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      attempts++;
     }
   }
 
@@ -170,44 +163,61 @@ export class PinterestScrapper {
       )}`;
       console.log(`Navigating to: ${searchUrl}`);
 
-      // Simple navigation with longer timeout
+      // Fast navigation
       await this.page.goto(searchUrl, {
-        waitUntil: "load",
-        timeout: 80000,
+        waitUntil: "domcontentloaded",
+        timeout: 30000,
       });
 
-      // Wait a bit for page to settle
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
+      // Quick pin detection with fallback
+      let pinsFound = false;
       try {
         await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 30000,
+          timeout: 10000,
         });
+        pinsFound = true;
       } catch {
-        // If pins not found, try to close any modals
-        const closeButtons = await this.page.$$(
-          '[data-test-id="closeModal"], [aria-label="Close"], .close-button'
-        );
+        console.log("Pins not found quickly, checking for modals...");
 
-        for (const button of closeButtons) {
-          try {
-            await button.click();
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-          } catch {}
+        const modalSelectors =
+          '[data-test-id="closeModal"], [aria-label="Close"], .close-button';
+        const closeButton = await this.page.$(modalSelectors);
+        if (closeButton) {
+          await closeButton.click();
+          await new Promise((resolve) => setTimeout(resolve, 1000));
         }
 
-        // Try again to find pins
-        await this.page.waitForSelector('[data-test-id="pin"]', {
-          timeout: 20000,
-        });
+        // One more quick attempt
+        try {
+          await this.page.waitForSelector('[data-test-id="pin"]', {
+            timeout: 5000,
+          });
+          pinsFound = true;
+        } catch {
+          const anyContent = await this.page.$("img");
+          if (!anyContent) {
+            throw new Error(
+              "No content loaded - Pinterest might be blocking requests"
+            );
+          }
+        }
       }
 
-      await this.autoScroll(limit);
+      // Use fast scrolling method
+      await this.fastScroll(limit);
 
       const pins = await this.page.$$('[data-test-id="pin"]');
-      console.log(`Found ${pins.length} pins`);
+      console.log(`Found ${pins.length} pins after fast scroll`);
 
       const images = await this.extractImageData(limit);
+
+      if (images.length === 0) {
+        throw new Error(
+          "No images extracted - Pinterest layout might have changed"
+        );
+      }
 
       return {
         images,
