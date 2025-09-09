@@ -24,7 +24,7 @@ const callbackend = async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        keyword: "cats",
+        keyword: "renaissance art aesthetics",
         limit: 3,
       }),
     });
