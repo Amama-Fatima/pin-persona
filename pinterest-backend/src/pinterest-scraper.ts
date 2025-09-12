@@ -204,12 +204,17 @@ export class PinterestScrapper {
           }
         }
       }
+      // Check if enough pins before scrolling
+      const initialPins = await this.page.$$('[data-test-id="pin"]');
+      console.log(`Initially loaded ${initialPins.length} pins, need ${limit}`);
 
-      // Use fast scrolling method
-      await this.fastScroll(limit);
+      if (initialPins.length < limit) {
+        console.log("Need more pins - scrolling...");
+        await this.fastScroll(limit);
+      }
 
       const pins = await this.page.$$('[data-test-id="pin"]');
-      console.log(`Found ${pins.length} pins after fast scroll`);
+      console.log(`Found ${pins.length} pins total`);
 
       const images = await this.extractImageData(limit);
 
