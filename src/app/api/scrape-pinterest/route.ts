@@ -2,7 +2,7 @@ import { PinterestScrapper } from "../../../lib/pinterest-scraper";
 
 export async function POST(req: Request) {
   try {
-    const { keyword, limit = 20 } = await req.json();
+    const { keyword, limit = 5 } = await req.json();
 
     if (!keyword) {
       return new Response(JSON.stringify({ error: "Keyword is required" }), {
