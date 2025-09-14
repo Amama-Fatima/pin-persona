@@ -83,6 +83,18 @@ export class PinterestScrapper {
     });
 
     await this.page.setViewport({ width: 800, height: 600 });
+
+    await this.page.setContent(`
+      <html>
+        <head>
+          <style>
+            img { display: none !important; }
+            * { animation: none !important; transition: none !important; }
+          </style>
+        </head>
+        <body></body>
+      </html>
+    `);
   }
 
   private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
