@@ -33,13 +33,14 @@ export class PinterestScrapper {
         "--disable-sync",
         "--disable-default-apps",
         "--aggressive-cache-discard",
+        "--disable-images",
       ],
     });
 
     this.page = await this.browser.newPage();
 
-    this.page.setDefaultNavigationTimeout(45000);
-    this.page.setDefaultTimeout(30000);
+    this.page.setDefaultNavigationTimeout(20000);
+    this.page.setDefaultTimeout(15000);
 
     // Blocking heavy resources for speed
     await this.page.setRequestInterception(true);
@@ -51,11 +52,18 @@ export class PinterestScrapper {
         resourceType === "stylesheet" ||
         resourceType === "font" ||
         resourceType === "media" ||
+        resourceType === "image" ||
+        resourceType === "other" ||
         url.includes("google-analytics") ||
         url.includes("googletagmanager") ||
         url.includes("facebook.net") ||
         url.includes("doubleclick") ||
-        url.includes("ads")
+        url.includes("ads") ||
+        url.includes("analytics") ||
+        url.includes("tracking") ||
+        url.includes(".css") ||
+        url.includes(".woff") ||
+        url.includes(".ttf")
       ) {
         req.abort();
       } else {
@@ -74,7 +82,7 @@ export class PinterestScrapper {
       Connection: "keep-alive",
     });
 
-    await this.page.setViewport({ width: 1024, height: 768 });
+    await this.page.setViewport({ width: 800, height: 600 });
   }
 
   private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
