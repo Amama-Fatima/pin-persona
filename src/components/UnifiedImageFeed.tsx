@@ -102,7 +102,9 @@ const UnifiedImageFeed: React.FC<UnifiedImageFeedProps> = ({
               <Images className="h-8 w-8 text-gray-400" />
             </div>
             <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
-              {isLoading ? "Loading images..." : "No images found yet"}
+              {isLoading
+                ? "Loading images... This may take 30 seconds"
+                : "No images found yet"}
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400 max-w-sm">
               {isLoading
