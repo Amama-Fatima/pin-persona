@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   res.send("Pinterest Scraper API is running");
 });
 
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
+
 app.post("/scrape", async (req, res) => {
   const { keyword, limit = 5 } = req.body;
 
