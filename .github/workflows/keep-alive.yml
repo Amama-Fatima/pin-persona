@@ -1,4 +1,4 @@
-name: Keep Render app awake
+name: Keep Render apps awake
 
 on:
   schedule:
@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Ping Render app
+      - name: Ping Render apps
         run: |
           echo "Ping starting at $(date -u)"
+
+          echo "Pinging pin-persona..."
           curl -sS --retry 3 --retry-delay 5 --max-time 20 \
             -H "User-Agent: GitHub-Actions-Keeper" \
             "https://pin-persona.onrender.com/health?_ts=$(date +%s)" \
+            -o /dev/null -w "HTTP %{http_code}\n" || true
+
+          echo "Pinging lenet-cnn-digit-classification..."
+          curl -sS --retry 3 --retry-delay 5 --max-time 20 \
+            -H "User-Agent: GitHub-Actions-Keeper" \
+            "https://lenet-cnn-digit-classification.onrender.com/health?_ts=$(date +%s)" \
             -o /dev/null -w "HTTP %{http_code}\n" || true
