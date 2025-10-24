@@ -10,6 +10,8 @@ export class PinterestScrapper {
   async initialize(): Promise<void> {
     this.browser = await puppeteer.launch({
       headless: true,
+      executablePath:
+        process.env.PUPPETEER_EXECUTABLE_PATH || "/usr/bin/chromium",
       args: [
         "--no-sandbox",
         "--disable-setuid-sandbox",
@@ -26,7 +28,6 @@ export class PinterestScrapper {
         "--disable-backgrounding-occluded-windows",
         "--disable-renderer-backgrounding",
         "--disable-extensions",
-        // Speed optimizations
         "--memory-pressure-off",
         "--disable-features=TranslateUI,BlinkGenPropertyTrees",
         "--disable-background-networking",
@@ -85,16 +86,16 @@ export class PinterestScrapper {
     await this.page.setViewport({ width: 800, height: 600 });
 
     await this.page.setContent(`
-      <html>
-        <head>
-          <style>
-            img { display: none !important; }
-            * { animation: none !important; transition: none !important; }
-          </style>
-        </head>
-        <body></body>
-      </html>
-    `);
+    <html>
+      <head>
+        <style>
+          img { display: none !important; }
+          * { animation: none !important; transition: none !important; }
+        </style>
+      </head>
+      <body></body>
+    </html>
+  `);
   }
 
   private async extractImageData(maxImages: number): Promise<PinterestImage[]> {
