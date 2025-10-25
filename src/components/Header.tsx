@@ -15,10 +15,22 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Prevent hydration mismatch by only rendering after mount
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    fetch("https://pinterest-scraper-789455248731.asia-south1.run.app/")
+      .then((res) => res.text())
+      .then((data) => {
+        console.log("API Response:", data);
+      })
+      .catch((err) => {
+        console.error("API Error:", err);
+      });
+  }, [mounted]);
 
   const getThemeIcon = () => {
     switch (theme) {

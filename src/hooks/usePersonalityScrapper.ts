@@ -44,7 +44,7 @@ export const usePersonalityScraper = () => {
         }));
 
         const response = await fetch(
-          "https://pin-persona.onrender.com/scrape",
+          "https://pinterest-scraper-789455248731.asia-south1.run.app/scrape",
           {
             method: "POST",
             headers: {
