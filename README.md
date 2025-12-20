@@ -4,8 +4,8 @@ Pin Persona explores how historical and cultural figures might be represented vi
 
 ## Live Demo
 
-- 🔗 Website: [https://pin-persona.vercel.app](https://pin-persona.vercel.app/)
-- 🚀 Model on Hugging Face: [pinterest-personality-keywords-25-August](https://huggingface.co/Amama02/pinterest-personality-keywords-25-August)
+- Website: [https://pin-persona.vercel.app](https://pin-persona.vercel.app/)
+- Model on Hugging Face: [pinterest-personality-keywords-25-August](https://huggingface.co/Amama02/pinterest-personality-keywords-25-August)
 - 🛠️ API Space: [pinterest-persona-api](https://huggingface.co/spaces/Amama02/pin-persona-25-august)
 
   https://github.com/user-attachments/assets/8ebe4cbb-ed61-49d6-9248-6818e39a89cd
