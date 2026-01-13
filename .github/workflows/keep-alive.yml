@@ -19,3 +19,9 @@ jobs:
             -H "User-Agent: GitHub-Actions-Keeper" \
             "https://al-waleed-clinic.onrender.com/api/health?_ts=$(date +%s)" \
             -o /dev/null -w "HTTP %{http_code}\n" || true
+
+          echo "Pinging auction-oop3..."
+          curl -sS --retry 3 --retry-delay 5 --max-time 20 \
+            -H "User-Agent: GitHub-Actions-Keeper" \
+            "https://auction-oop3.onrender.com/?_ts=$(date +%s)" \
+            -o /dev/null -w "HTTP %{http_code}\n" || true
