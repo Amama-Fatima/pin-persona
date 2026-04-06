@@ -8,20 +8,31 @@ on:
 jobs:
   ping:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
+
     steps:
-      - name: Ping Render apps
+      - name: Ping Render apps like a human
         run: |
           echo "Ping starting at $(date -u)"
 
-          echo "Pinging al-waleed-clinic..."
-          curl -sS --retry 3 --retry-delay 5 --max-time 20 \
-            -H "User-Agent: GitHub-Actions-Keeper" \
-            "https://al-waleed-clinic.onrender.com/api/health?_ts=$(date +%s)" \
-            -o /dev/null -w "HTTP %{http_code}\n" || true
+          USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
-          echo "Pinging auction-oop3..."
-          curl -sS --retry 3 --retry-delay 5 --max-time 20 \
-            -H "User-Agent: GitHub-Actions-Keeper" \
-            "https://auction-oop3.onrender.com/?_ts=$(date +%s)" \
-            -o /dev/null -w "HTTP %{http_code}\n" || true
+          APPS=(
+            "https://al-waleed-clinic.onrender.com/api/health"
+            "https://tiktok-stream.onrender.com/health"
+          )
+
+          for APP in "${APPS[@]}"; do
+            echo "Pinging $APP"
+
+            curl -sS --retry 3 --retry-delay 5 --max-time 20 \
+              -H "User-Agent: $USER_AGENT" \
+              -H "Accept: application/json,text/html" \
+              "${APP}?_ts=$(date +%s)&r=$RANDOM" \
+              -o /dev/null -w "HTTP %{http_code}\n" || true
+
+            # Random pause between requests (3–12 sec)
+            sleep $((RANDOM % 10 + 3))
+          done
+
+          echo "Ping cycle complete"
