@@ -2,20 +2,24 @@ name: Keep Render apps awake
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/14 * * * *"
   workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 6
 
     steps:
-      - name: Ping Render apps like a human
+      - name: Ping Render apps naturally
         run: |
-          echo "Ping starting at $(date -u)"
+          echo "Ping cycle started at $(date -u)"
 
-          USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          USER_AGENTS=(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+          )
 
           APPS=(
             "https://al-waleed-clinic.onrender.com/api/health"
@@ -23,16 +27,21 @@ jobs:
           )
 
           for APP in "${APPS[@]}"; do
+            UA=${USER_AGENTS[$RANDOM % ${#USER_AGENTS[@]}]}
+
             echo "Pinging $APP"
 
             curl -sS --retry 3 --retry-delay 5 --max-time 20 \
-              -H "User-Agent: $USER_AGENT" \
-              -H "Accept: application/json,text/html" \
+              -H "User-Agent: $UA" \
+              -H "Accept: text/html,application/json,application/xhtml+xml" \
+              -H "Accept-Language: en-US,en;q=0.9" \
+              -H "Referer: https://www.google.com/" \
+              -H "Cache-Control: no-cache" \
               "${APP}?_ts=$(date +%s)&r=$RANDOM" \
               -o /dev/null -w "HTTP %{http_code}\n" || true
 
-            # Random pause between requests (3–12 sec)
-            sleep $((RANDOM % 10 + 3))
+            # wait 1–3 minutes between services
+            sleep $((RANDOM % 120 + 60))
           done
 
-          echo "Ping cycle complete"
+          echo "Ping cycle completed"
