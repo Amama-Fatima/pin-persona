@@ -14,7 +14,7 @@ export async function getKeywordsForPersonality(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemma-3-4b-it:free",
+        model: "google/gemma-4-31b-it:free",
         messages: [
           {
             role: "user",
